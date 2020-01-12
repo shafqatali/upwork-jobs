@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>{FAMILY_NAME_LOWER} genealogy</title>
+    <meta name="keywords" content="Alexander, family, history, genealogy, geneology, Alexander, Howard, Jones"/>
+    <meta name="description" content="{FAMILY_NAME_LOWER} family history. Genealogy of the {FAMILY_NAME_LOWER} family"/>
+    <meta name="robots" content="all"/>
+    <style>
+        @import url(http://www.google.com/cse/api/branding.css);
+    </style>
+    <style>
+        body * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        ul,
+        ul li {
+            text-align: left;
+        }
+
+        #wrapper {
+            width: {PAGE_WIDTH}px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .family-name {
+            color: blue;
+            font-size: xx-large;
+        }
+
+        .banner-div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @media screen and (max-width: 640px) {
+            .banner-div,
+            #wrapper {
+                margin: 0 auto;
+                display: block;
+                width: calc(100% - 30px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="left-banner banner-div">
+    {LEFT_PLACEHOLDER}
+</div>
+<div id="wrapper" class="MIDDLE_BANNER_CLASS">
+    {TOP_PLACEHOLDER}
+    <p><b class="family-name">{FAMILY_NAME}</b></p>
+    <div class="add-box">
+        <div class="family-info">{FAMILY_INTRO}</div>
+        {MIDDLE_PLACEHOLDER}
+    </div>
+    <p><a href="home.htm">home,</a> <a href="index.htm">prologue,</a> <a href="credits.htm">credits</a>
+    </p>
+    <p>Back to <a href="{FAMILY_NAME_LOWER}pedigree.htm">{FAMILY_NAME} Pedigree</a></p>
+    <p><span>&copy;Copyright 2012-{CURRENT_YEAR} ellisgenealogy.com</span></p>
+    {BOTTOM_PLACEHOLDER}
+</div>
+<div class="right-banner banner-div">
+    {RIGHT_PLACEHOLDER}
+</div>
+</body>
+</html>
