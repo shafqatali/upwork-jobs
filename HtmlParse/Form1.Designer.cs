@@ -74,7 +74,7 @@
             // 
             this.btnParse.Location = new System.Drawing.Point(163, 86);
             this.btnParse.Name = "btnParse";
-            this.btnParse.Size = new System.Drawing.Size(159, 29);
+            this.btnParse.Size = new System.Drawing.Size(276, 29);
             this.btnParse.TabIndex = 3;
             this.btnParse.Text = "&Parse HTML File";
             this.btnParse.UseVisualStyleBackColor = true;

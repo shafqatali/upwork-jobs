@@ -49,7 +49,7 @@ namespace HtmlParser
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = fbdOutput.ShowDialog();
-            if(result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 txtOutputFolder.Text = fbdOutput.SelectedPath;
             }
@@ -71,7 +71,7 @@ namespace HtmlParser
 
         private void btnParse_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtFilePath.Text) && string.IsNullOrEmpty(txtOutputFolder.Text))
+            if (string.IsNullOrEmpty(txtFilePath.Text) || string.IsNullOrEmpty(txtOutputFolder.Text))
             {
                 MessageBox.Show("Please select input file and output folder first.", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -84,9 +84,9 @@ namespace HtmlParser
             {
                 var fileparts = fileToParse.Split('\\');
                 var realName = fileparts[fileparts.Length - 1];
-
+                Application.DoEvents();
                 List<Data> list = Parse_HTML_File(fileToParse);
-                if(list.Count > 0)
+                if (list.Count > 0)
                 {
                     dgView.AutoGenerateColumns = true;
                     dgView.DataSource = list;
@@ -96,14 +96,16 @@ namespace HtmlParser
                         dgView.Columns[c].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
 
-                    string fileName = WriteCSV(list, realName);
+                    btnParse.Text = " Writing into Excel file ....";
+                    string fileName = MakeExcelFile(list, realName);
 
                     DialogResult dr = MessageBox.Show("HTML File parsed successfully. Open Excel File?", "Output", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dr == DialogResult.Yes)
                     {
                         Process.Start("explorer.exe", fileName);
                     }
-                }else
+                }
+                else
                 {
                     MessageBox.Show("The input file doesn't have required data.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -188,31 +190,75 @@ namespace HtmlParser
         private string WriteCSV(List<Data> list, string realName)
         {
             var json = JsonConvert.SerializeObject(list);
-                string fileName = txtOutputFolder.Text + @"\"+ DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-"+ realName +".csv";
+            string fileName = txtOutputFolder.Text + @"\" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + realName + ".csv";
 
-                DataTable dataTable = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
+            DataTable dataTable = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
 
-                var lines = new List<string>();
+            var lines = new List<string>();
 
-                string[] columnNames = dataTable.Columns
-                    .Cast<DataColumn>()
-                    .Select(column => column.ColumnName)
-                    .ToArray();
+            string[] columnNames = dataTable.Columns
+                .Cast<DataColumn>()
+                .Select(column => column.ColumnName)
+                .ToArray();
 
-                var header = string.Join(",", columnNames.Select(name => $"\"{name}\""));
-                lines.Add(header);
+            var header = string.Join(",", columnNames.Select(name => $"\"{name}\""));
+            lines.Add(header);
 
-                var valueLines = dataTable.AsEnumerable()
-                    .Select(row => string.Join(",", row.ItemArray.Select(val => $"\"{val}\"")));
+            var valueLines = dataTable.AsEnumerable()
+                .Select(row => string.Join(",", row.ItemArray.Select(val => $"\"{val}\"")));
 
-                lines.AddRange(valueLines);
+            lines.AddRange(valueLines);
 
-                File.WriteAllLines(fileName, lines);
+            File.WriteAllLines(fileName, lines);
 
             return fileName;
         }
 
-        
+        private string MakeExcelFile(List<Data> list, string realName)
+        {
+            realName = realName.Replace(".htm", "");
+            realName = realName.Replace(".html", "");
+            var json = JsonConvert.SerializeObject(list);
+            string fileName = txtOutputFolder.Text + @"\" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + realName + ".xlsx";
+            DataTable dataTable = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
+
+            try
+            {
+                var excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Visible = false;
+                excel.DisplayAlerts = false;
+                var worKbooK = excel.Workbooks.Add(Type.Missing);
+
+
+                var worKsheeT = (Microsoft.Office.Interop.Excel.Worksheet)worKbooK.ActiveSheet;
+                worKsheeT.Name = "List";
+                int rowcount = 0;
+
+                foreach (DataRow datarow in dataTable.Rows)
+                {
+                    rowcount += 1;
+                    for (int i = 1; i <= dataTable.Columns.Count; i++)
+                    {
+                        worKsheeT.Cells[rowcount, i] = datarow[i - 1].ToString();
+                    }
+                }
+
+                var celLrangE = worKsheeT.Range[worKsheeT.Cells[1, 1], worKsheeT.Cells[rowcount, dataTable.Columns.Count]];
+                celLrangE.EntireColumn.AutoFit();
+                
+                worKbooK.SaveAs(fileName);
+                worKbooK.Close();
+                excel.Quit();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+           
+            return fileName;
+        }
     }
 
     public class Data
