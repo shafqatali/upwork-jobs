@@ -77,6 +77,10 @@ namespace HtmlParser
                 return;
 
             }
+            dgView.DataSource = null;
+            dgView.Rows.Clear();
+            dgView.Refresh();
+
             btnParse.Enabled = false;
             btnParse.Text = " Parsing HTML file ....";
             string fileToParse = txtFilePath.Text;
@@ -97,7 +101,7 @@ namespace HtmlParser
                     }
 
                     btnParse.Text = " Writing into Excel file ....";
-                    string fileName = MakeExcelFile(list, realName);
+                    string fileName = MakeExcelFile(list, realName, chkRowHeaders.Checked, chkSaveJson.Checked);
 
                     DialogResult dr = MessageBox.Show("HTML File parsed successfully. Open Excel File?", "Output", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dr == DialogResult.Yes)
@@ -214,16 +218,23 @@ namespace HtmlParser
             return fileName;
         }
 
-        private string MakeExcelFile(List<Data> list, string realName)
+        private string MakeExcelFile(List<Data> list, string realName, bool addHeaders = false, bool saveJson = false)
         {
             realName = realName.Replace(".htm", "");
             realName = realName.Replace(".html", "");
-            var json = JsonConvert.SerializeObject(list);
-            string fileName = txtOutputFolder.Text + @"\" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + realName + ".xlsx";
-            DataTable dataTable = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
+            
+            string fileName = txtOutputFolder.Text + @"\" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + "-" + realName;
+            string excelFileName = fileName + ".xlsx";
+            string jsonFileName = fileName + ".js";
 
             try
             {
+                var json = JsonConvert.SerializeObject(list);
+                DataTable dataTable = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
+                if (saveJson)
+                {
+                    File.WriteAllText(jsonFileName, json);
+                }
                 var excel = new Microsoft.Office.Interop.Excel.Application();
                 excel.Visible = false;
                 excel.DisplayAlerts = false;
@@ -233,7 +244,14 @@ namespace HtmlParser
                 var worKsheeT = (Microsoft.Office.Interop.Excel.Worksheet)worKbooK.ActiveSheet;
                 worKsheeT.Name = "List";
                 int rowcount = 0;
-
+                if (addHeaders)
+                {
+                    worKsheeT.Cells[1, 1] = "Id";
+                    worKsheeT.Cells[1, 2] = "Full Name";
+                    worKsheeT.Cells[1, 3] = "Uid";
+                    rowcount = 1;
+                }
+               
                 foreach (DataRow datarow in dataTable.Rows)
                 {
                     rowcount += 1;
@@ -246,7 +264,7 @@ namespace HtmlParser
                 var celLrangE = worKsheeT.Range[worKsheeT.Cells[1, 1], worKsheeT.Cells[rowcount, dataTable.Columns.Count]];
                 celLrangE.EntireColumn.AutoFit();
                 
-                worKbooK.SaveAs(fileName);
+                worKbooK.SaveAs(excelFileName);
                 worKbooK.Close();
                 excel.Quit();
 
@@ -254,10 +272,14 @@ namespace HtmlParser
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
            
-            return fileName;
+            return excelFileName;
+        }
+
+        private void chkRowHeaders_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

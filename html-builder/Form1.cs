@@ -62,7 +62,7 @@ namespace html_builder
                 string familyNameLowerCase = txtFamilyName.Text.ToLower();
 
                 string title = familyNameLowerCase + " genealogy";
-                string output_file_name = familyNameLowerCase + " Family genealogy " + DateTime.Now.ToString("yyyyMMddHHmmss") + ".html";
+                string output_file_name = familyNameLowerCase + " genealogy " + DateTime.Now.ToString("yyyyMMddHHmmss") + ".html";
 
                 var file_content = File.ReadAllText(path).ToString();
 

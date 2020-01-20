@@ -1,0 +1,81 @@
+source-link
+https://www.c-sharpcorner.com/UploadFile/bd6c67/how-to-create-excel-file-using-C-Sharp/
+
+Microsoft.Office.Interop.Excel.Application excel;  
+Microsoft.Office.Interop.Excel.Workbook worKbooK;  
+Microsoft.Office.Interop.Excel.Worksheet worKsheeT;  
+Microsoft.Office.Interop.Excel.Range celLrangE;  
+  
+try   
+{  
+    excel = new Microsoft.Office.Interop.Excel.Application();  
+    excel.Visible = false;  
+    excel.DisplayAlerts = false;  
+    worKbooK = excel.Workbooks.Add(Type.Missing);  
+  
+  
+    worKsheeT = (Microsoft.Office.Interop.Excel.Worksheet) worKbooK.ActiveSheet;  
+    worKsheeT.Name = "StudentRepoertCard";  
+  
+    worKsheeT.Range[worKsheeT.Cells[1, 1], worKsheeT.Cells[1, 8]].Merge();  
+    worKsheeT.Cells[1, 1] = "Student Report Card";  
+    worKsheeT.Cells.Font.Size = 15;  
+  
+  
+    int rowcount = 2;  
+  
+    foreach(DataRow datarow in ExportToExcel().Rows)  
+    {  
+        rowcount += 1;  
+        for (int i = 1; i <= ExportToExcel().Columns.Count; i++)   
+        {  
+  
+            if (rowcount == 3)   
+            {  
+                worKsheeT.Cells[2, i] = ExportToExcel().Columns[i - 1].ColumnName;  
+                worKsheeT.Cells.Font.Color = System.Drawing.Color.Black;  
+  
+            }  
+  
+            worKsheeT.Cells[rowcount, i] = datarow[i - 1].ToString();  
+  
+            if (rowcount > 3)  
+            {  
+                if (i == ExportToExcel().Columns.Count)  
+                {  
+                    if (rowcount % 2 == 0)   
+                    {  
+                        celLrangE = worKsheeT.Range[worKsheeT.Cells[rowcount, 1], worKsheeT.Cells[rowcount, ExportToExcel().Columns.Count]];  
+                    }  
+  
+                }  
+            }  
+  
+        }  
+  
+    }  
+  
+    celLrangE = worKsheeT.Range[worKsheeT.Cells[1, 1], worKsheeT.Cells[rowcount, ExportToExcel().Columns.Count]];  
+    celLrangE.EntireColumn.AutoFit();  
+    Microsoft.Office.Interop.Excel.Borders border = celLrangE.Borders;  
+    border.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;  
+    border.Weight = 2d;  
+  
+    celLrangE = worKsheeT.Range[worKsheeT.Cells[1, 1], worKsheeT.Cells[2, ExportToExcel().Columns.Count]];  
+  
+    worKbooK.SaveAs(textBox1.Text);;  
+    worKbooK.Close();  
+    excel.Quit();  
+  
+}   
+catch (Exception ex)   
+{  
+    MessageBox.Show(ex.Message);  
+  
+}  
+finally   
+{  
+    worKsheeT = null;  
+    celLrangE = null;  
+    worKbooK = null;  
+}  

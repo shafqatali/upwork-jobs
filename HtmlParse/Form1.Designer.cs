@@ -39,6 +39,8 @@
             this.fbdOutput = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.chkRowHeaders = new System.Windows.Forms.CheckBox();
+            this.chkSaveJson = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +136,34 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Extracted Data";
             // 
+            // chkRowHeaders
+            // 
+            this.chkRowHeaders.AutoSize = true;
+            this.chkRowHeaders.Location = new System.Drawing.Point(455, 91);
+            this.chkRowHeaders.Name = "chkRowHeaders";
+            this.chkRowHeaders.Size = new System.Drawing.Size(148, 24);
+            this.chkRowHeaders.TabIndex = 9;
+            this.chkRowHeaders.Text = "Add row headers";
+            this.chkRowHeaders.UseVisualStyleBackColor = true;
+            this.chkRowHeaders.CheckedChanged += new System.EventHandler(this.chkRowHeaders_CheckedChanged);
+            // 
+            // chkSaveJson
+            // 
+            this.chkSaveJson.AutoSize = true;
+            this.chkSaveJson.Location = new System.Drawing.Point(631, 91);
+            this.chkSaveJson.Name = "chkSaveJson";
+            this.chkSaveJson.Size = new System.Drawing.Size(131, 24);
+            this.chkSaveJson.TabIndex = 10;
+            this.chkSaveJson.Text = "Save as JSON";
+            this.chkSaveJson.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 705);
+            this.Controls.Add(this.chkSaveJson);
+            this.Controls.Add(this.chkRowHeaders);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtOutputFolder);
@@ -174,6 +199,8 @@
         private System.Windows.Forms.FolderBrowserDialog fbdOutput;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkRowHeaders;
+        private System.Windows.Forms.CheckBox chkSaveJson;
     }
 }
 
