@@ -1,0 +1,25 @@
+---
+title: n/a
+subtitle: Spinner Usage Example
+---
+<div class="container no-gutters ds-elements">
+	<div id="form-spinner" class="d-none">
+		{% include spinner.html %}
+	</div>
+	<div class="form-group">
+		<label for="text001">Label</label>
+		<input id="text001" class="form-control" type="text" placeholder="Text Input">
+	</div>
+	<input id="formSubmit" type="button" value="Submit" class="btn btn-primary">
+	<script>
+		function toggleLoader() {
+			$("#formSubmit").click(function (e) {
+				e.preventDefault();
+				$("#form-spinner").removeClass("d-none");
+				setTimeout(function () {
+					$("#form-spinner").addClass("d-none");
+				},5000);
+			});
+		}
+	</script>
+</div>

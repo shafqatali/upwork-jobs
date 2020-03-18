@@ -1,0 +1,38 @@
+---
+---
+{% strip %}
+{% assign plugins = site.data.plugins.items %}
+{% assign hideHomeLinkClass = 'ds-home-link' %}
+{% assign PresentationCSS = 'yes' %}
+{% if page.presentation == 'no' %}
+{% assign PresentationCSS = 'no' %}
+{% assign hideHomeLinkClass = 'd-none' %}
+{% endif %}
+
+{% assign isOfflinePage = "no" %}
+{% if page.title == "Offline" %}
+{% assign isOfflinePage = "yes" %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    {% comment %} Viewport for single mobile breakpoint @641px {% endcomment %}
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Restaurant {{page.title}}</title>
+    {% if PresentationCSS == 'yes' %}
+    <!--It's temporary CSS only for presentation of HTML page. It should be excluded from actual project Kentico/CMS -->
+    <!--If you want to remove any page then add this "presentation: 'yes'" to your page  between liquid tags -->
+    <link href="css/patterns.css" rel="stylesheet"/>
+    {% endif %}
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+{{content}}
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endstrip %}
