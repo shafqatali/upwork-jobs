@@ -8,26 +8,27 @@
 //
 // Color system
 //
-$primary: #007BFF;
-$secondary: #6C757D;
-$success: #28A745;
+$primary: #e70d4d;
+$secondary: #4285f4;
+$success: #2db148;
 $info: #17A2B8;
-$warning: #FFC107;
+$warning: #ffcc2a;
 $danger: #DC3545;
-$light: #F8F9FA;
-$dark: #343A40;
+$light: #b9b9b7;
+$dark: #000000;
+
 $theme-colors: map-merge((
-  "primary":    #007BFF,
-  "secondary":  #6C757D,
-  "success":    #28A745,
+  "primary":    #e70d4d,
+  "secondary":  #4285f4,
+  "success":    #2db148,
   "info":       #17A2B8,
-  "warning":    #FFC107,
+  "warning":    #ffcc2a,
   "danger":     #DC3545,
   "light":      #F8F9FA,
   "dark":       #343A40
 ), $theme-colors);
 // Grid breakpoints
-
+//$theme-colors: map-remove($theme-colors, "warning","danger", "light", "dark");
 $grid-breakpoints: (
         xs: 0,
         sm: 641px,
@@ -50,9 +51,9 @@ $container-max-widths: (
 //
 // Settings for the `<body>` element.;
 $body-bg: #FFFFFF;
-$body-color: #333333;
-$link-color: #337AB7;
-$link-hover-color: #23527C;
+$body-color: #000000;
+$link-color: #ffcc2a;
+$link-hover-color: #ffcc2a;
 $link-hover-decoration: underline;
 
 // Fonts
@@ -88,12 +89,12 @@ $table-border-color: #DDDDDD;
 
 $btn-font-weight: normal;
 $input-bg: #FFFFFF;
-$input-color: #333333;
-$input-border-color: #333333;
-$input-border-radius: 5px;
-$input-border-radius-lg: 5px;
-$input-border-radius-sm: 5px;
-$input-focus-border-color: #66AFE9;
+$input-color: #000000;
+$input-border-color: #c4c4c4;
+$input-border-radius: 50px;
+$input-border-radius-lg: 50px;
+$input-border-radius-sm: 50px;
+$input-focus-border-color: #c4c4c4;
 
 // Dropdowns
 //
@@ -133,3 +134,18 @@ $enable-transitions: true;
 $enable-hover-media-query: false;
 $enable-grid-classes: true;
 $enable-print-styles: true;
+
+
+
+//Custom Controls
+$custom-control-indicator-focus-border-color: $success;
+$custom-control-indicator-active-bg: $success;
+$custom-control-indicator-checked-border-color: transparent;
+$custom-control-indicator-active-border-color: transparent;
+$custom-control-indicator-checked-bg: $success;
+$custom-switch-indicator-border-radius: 24px;
+$custom-control-indicator-bg: $success;
+$custom-control-indicator-border-color: #fff;
+$custom-control-indicator-disabled-bg: rgba($success, .5);
+$custom-control-indicator-checked-disabled-bg: rgba($success, .5);
+$input-btn-focus-color: rgba($success, .25);

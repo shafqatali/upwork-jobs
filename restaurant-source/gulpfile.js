@@ -56,7 +56,6 @@ let babel = require('gulp-babel');
 let fs = require('fs');
 let LineByLineReader = require('line-by-line');
 
-let libManJson = require('./libman.json');
 let execSync = require('sync-exec');
 
 
@@ -132,17 +131,17 @@ gulp.task('es_lint', function (callback) {
 /*#region Js Gulp Items*/
 gulp.task('process_js', function (callback) {
     runSequence(
-        /*'es_lint',
+        'es_lint',
         'parse_with_babel',
-        'concat_js_libraries',
-        'concat_js_files',
-        'merge_js_files',
-        'uglify_js_files',
+        //'concat_js_libraries',
+        //'concat_js_files',
+        //'merge_js_files',
+        //'uglify_js_files',
         //'concat_normal_js_files',
         //'merge_normal_js_files',
         //'uglify_normal_js_files',
         'delete_working_js_files',
-        'copy_js_files',*/
+        'copy_js_files',
         callback);
 });
 
@@ -337,7 +336,6 @@ gulp.task('gulp_delete_jekyll', function (callback) {
 gulp.task('build_jekyll', function (callback) {
     runSequence(
         //'downloadVueFiles',
-        'gulp_libman_restore',
         'read_file_lines',
         'gulp_delete_jekyll',
         'process_js',
@@ -562,17 +560,6 @@ function writeMarkupToFile(fullName, color_palette_markup, callback) {
 let repo = "Frontend-Plugins";
 let plugin;
 
-//clone plugin repo
-gulp.task('clone_plugin_repo', function (done) {
-    plugin = process.argv[4];
-    git.clone('https://github.com/Arekibo/Frontend-Plugins.git', function (err) {
-        if (err) {
-            done(err);
-        }
-        done();
-    });
-});
-
 gulp.task('copy_plugin', ['clone_plugin_repo'], function (done) {
     let folders = ['_data', '_includes', 'css/imgs', 'images', 'js', '_scss', 'gulp_config'];
     let tasks = [];
@@ -700,7 +687,6 @@ function error_alert(message) {
 //for libupdate
 gulp.task('build_jekyll_libupdate', function (callback) {
     runSequence(
-        //'gulp_libman_update',
         'read_file_lines',
         'gulp_delete_jekyll',
         'process_js',
@@ -746,21 +732,5 @@ gulp.task('libupdate', ['build_jekyll_libupdate'], function () {
         ShowMessage(), callback
     }]);
     startWatching = true;
-});
-
-gulp.task('gulp_libman_update', function () {
-    execSync('libman restore');
-    libManJson.libraries.forEach(function (item) {
-        var n = item.library.indexOf('@');
-        var libname = item.library.substring(0, n != -1 ? n : item.library.length);
-        var shellCommand = 'libman update ' + libname;
-        console.log(shellCommand);
-        execSync(shellCommand);
-    });
-});
-
-gulp.task('gulp_libman_restore', function () {
-    console.log('Libman Restore Only');
-    execSync('libman restore');
 });
 /*#endregion*/

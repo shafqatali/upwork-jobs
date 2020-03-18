@@ -1,0 +1,39 @@
+.custom-switch {
+  padding: 0;
+  .custom-control-label {
+    padding-right: 60px;
+    font-size: 23px;
+    font-weight: 400;
+    color: $textColor;
+    &:after,
+    &:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      display: block;
+      margin: auto;
+    }
+    &:before {
+      width: 55px;
+      height: 31px;
+    }
+    &:after {
+      width: 18px;
+      height: 18px;
+      right: 8px;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &:after {
+      transform: none;
+      right: 30px;
+      background-color: $white;
+    }
+  }
+}
+
+.mobile-boxx {
+  max-width: 360px;
+  margin: auto;
+}

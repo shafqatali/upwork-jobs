@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arekibo/Base-template.git"
+    "url": "git+https://github.com/Shafqat/Base-template.git"
   },
-  "author": "Arekibo",
+  "author": "Shafqat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Arekibo/Base-template/issues"
+    "url": "https://github.com/Shafqat/Base-template/issues"
   },
-  "homepage": "https://github.com/Arekibo/Base-template#readme",
+  "homepage": "https://github.com/Shafqat/Base-template#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",

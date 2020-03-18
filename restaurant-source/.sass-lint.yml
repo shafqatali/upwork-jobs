@@ -30,7 +30,7 @@ rules:
   no-invalid-hex: 2
   no-misspelled-properties: 1
   property-units:
-    - 2
+    - 1
     -
       per-property: { font-size: ['rem'] }
   quotes:
