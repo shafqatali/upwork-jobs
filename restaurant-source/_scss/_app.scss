@@ -1,3 +1,11 @@
+@media screen and (min-width: $screen-sm) {
+  .mobile-box {
+    padding: 50px 0;
+    max-width: 360px;
+    margin: 0 auto 0 60px;
+    background-color: $lightBg;
+  }
+}
 .custom-switch {
   padding: 0;
   .custom-control-label {
@@ -31,13 +39,6 @@
       background-color: $white;
     }
   }
-}
-
-.mobile-box {
-  padding: 50px 0;
-  max-width: 360px;
-  margin: 0 auto 0 60px;
-  background-color: $lightBg;
 }
 
 *[class*="svg-"] {
