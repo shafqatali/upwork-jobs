@@ -1,0 +1,21 @@
+{% assign fActive = include.active | default: "no" %}
+{% assign fName = include.name | default: "Barbecu Burger" %}
+{% assign fDetail = include.detail | default: "Lorem ipsum is simply dummy" %}
+{% assign fPrice = include.price | default: "111,80" %}
+{% assign fCount = include.count | default: "02" %}
+
+{% assign isActive = "" %}
+{% assign buttonColour = "" %}
+{% if fActive == "yes" %}
+{% assign isActive = 'active' %}
+{% assign buttonColour = 'white' %}
+{% endif %}
+
+<div class="order-detail">
+    <p><span>Date:</span> 12/03/2020 at 10:45</p>
+    <p><span>Number:</span> 2858516</p>
+    <p><span>Total Price:</span>15,30</p>
+    <p><span>Items:</span></p>
+    <p>(1) Barbecue Burger</p>
+    <p>(1) Cheeseburger</p>
+</div>

@@ -1,0 +1,17 @@
+{% assign fColour = include.colour | default: "" %}
+{% assign fIcon = include.icon | default: "svg-tick-circle" %}
+{% assign fExtra = include.extra | default: "no" %}
+
+<div class="form-group">
+    <div class="input-group {{fColour}}">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        {% if fExtra == "yes" %}
+        <div class="input-group-append multi">
+            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+        </div>
+        {% endif %}
+        <div class="input-group-append">
+            <button  class="input-group-text" type="button"><span class="{{fIcon}}"></span></button>
+        </div>
+    </div>
+</div>

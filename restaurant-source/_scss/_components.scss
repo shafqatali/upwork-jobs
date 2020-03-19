@@ -17,6 +17,20 @@
   vertical-align: middle;
 }
 
+.btn-white {
+  border: 1px solid $white;
+  background-color: $white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  &.btn-rounded {
+    border-radius: 50px;
+    border: 1px solid $greyC4;
+    box-shadow: none;
+  }
+}
+.btn-light {
+  border: 1px solid $greyText;
+  background-color: $lightBg;
+}
 .room {
   width: 88px;
   min-height: 89px;
@@ -95,15 +109,6 @@
     display: inline-block;
     vertical-align: text-top;
     margin-right: 5px;
-  }
-  &.btn-white {
-    border: 1px solid $white;
-    background-color: $white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  }
-  &.btn-light {
-    border: 1px solid $greyText;
-    background-color: $lightBg;
   }
 }
 
@@ -189,5 +194,124 @@
   .quantity {
     margin: 0;
     display: inline-block;
+  }
+}
+.menu-item-detail,
+.order-detail {
+  padding: 15px 15px;
+  min-height: 173px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: $white;
+  p {
+    color: $greyText;
+    font-family: $ffOpenSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 5px;
+    span {
+      color: $primary;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu-item-detail {
+  position: relative;
+  padding-right: 60px;
+  p {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .buttons-wrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    width: 45px;
+    height: 100%;
+    padding: 15px 0;
+    .btn-dark {
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 15px;
+      left: auto;
+      margin: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+.page-header {
+  font-size: 0;
+  background-color: transparent;
+  padding: 10px 0;
+  h1,
+  .btn-plain {
+    vertical-align: middle;
+  }
+  .btn-plain {
+    width: 60px;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    width: calc(100% - 120px);
+    color: $textColor;
+    font-family: $ffOpenSans;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.input-group {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: $white;
+  .form-control {
+    border-radius: 8px 0 0 8px;
+  }
+  .input-group-append {
+    .input-group-text {
+      border-radius: 0 8px 8px 0;
+      background-color: $lightGray;
+    }
+  }
+  &.bg-green {
+    .form-control {
+      border-right: transparent;
+    }
+    .input-group-append {
+      .input-group-text {
+        background-color: $green;
+      }
+    }
+    .input-group-append.multi {
+      .input-group-text {
+        background-color: transparent;
+        border-left: transparent;
+      }
+    }
+  }
+  &.bg-white {
+    .form-control {
+      border-right: transparent;
+    }
+    .input-group-append {
+      .input-group-text {
+        background-color: $white;
+        border-left: transparent;
+      }
+    }
   }
 }

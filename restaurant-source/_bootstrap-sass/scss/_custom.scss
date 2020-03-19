@@ -8,27 +8,29 @@
 //
 // Color system
 //
-$primary: #e70d4d;
+$primary: #E70D4D;
 $secondary: #4285f4;
-$success: #2db148;
+$success: #2DB148;
 $info: #17A2B8;
-$warning: #ffcc2a;
+$warning: #FFCC2A;
 $danger: #DC3545;
-$light: #b9b9b7;
-$dark: #000000;
+$light: #B9B9B7;
+$black: #000000;
+$dark: #3f3d56;
 
 $theme-colors: (
-        "primary":    #e70d4d,
-        "secondary":  #4285f4,
-        "success":    #2db148,
-        "info":       #17A2B8,
-        "warning":    #ffcc2a,
-        "danger":     #DC3545,
-        "light":      #b9b9b7,
-        "dark":       #000000
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "black":      $black,
+        "dark":       $dark
 );
 // Grid breakpoints
-$theme-colors: map-remove($theme-colors, "warning","danger", "light", "dark", "info");
+//$theme-colors: map-remove($theme-colors, "warning","danger", "light", "info");
 $grid-breakpoints: (
         xs: 0,
         sm: 641px,
@@ -44,35 +46,40 @@ $container-max-widths: (
         md: 1170px,
         lg: 1170px,
         xl: 1170px
-);$grid-gutter-width: 30px;
+);
+$grid-gutter-width: 30px;
 
 
 // Body
 //
 // Settings for the `<body>` element.;
 $body-bg: #FFFFFF;
-$body-color: #000000;
-$link-color: #ffcc2a;
-$link-hover-color: #ffcc2a;
+$body-color: $dark;
+$link-color: #FFCC2A;
+$link-hover-color: $link-color;
 $link-hover-decoration: underline;
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.;
 $font-family-base: 'Open Sans', sans-serif;
-$font-size-base: 1rem;
-$h1-font-size: 2.25rem;
+$font-size-base: 1.25rem;
+/*$h1-font-size: 2.25rem;
 $h2-font-size: 1.875rem;
 $h3-font-size: 1.5rem;
 $h4-font-size: 1.125rem;
 $h5-font-size: 0.875rem;
-$h6-font-size: 0.75rem;
+$h6-font-size: 0.75rem;*/
 $line-height-base: 1.6;
 $headings-font-family: 'Open Sans', sans-serif;
+/*
 $headings-font-weight: 500;
 $headings-line-height: 1.1;
-$headings-color: #000000;
-$border-radius: 4px;
+*/
+$headings-color: $dark;
+$border-radius: 8px;
+
+/*
 
 // Tables
 //
@@ -84,18 +91,20 @@ $table-accent-bg: #F9F9F9;
 $table-hover-bg: #F5F5F5;
 $table-active-bg: #F5F5F5;
 $table-border-color: #DDDDDD;
+*/
 
 // Buttons + Forms
 
 $btn-font-weight: normal;
 $input-bg: #FFFFFF;
-$input-color: #000000;
-$input-border-color: #c4c4c4;
+$input-color: $dark;
+$input-border-color: #C4C4C4;
 $input-border-radius: 50px;
 $input-border-radius-lg: 50px;
 $input-border-radius-sm: 50px;
-$input-focus-border-color: #c4c4c4;
+$input-focus-border-color: #C4C4C4;
 
+/*
 // Dropdowns
 //
 // Dropdown menu container and contents.
@@ -116,11 +125,10 @@ $breadcrumb-padding-x: 0px;
 $breadcrumb-item-padding: 8px;
 $breadcrumb-margin-bottom: 0px;
 $breadcrumb-bg: transparent;
-$breadcrumb-divider-color: #000000;
+$breadcrumb-divider-color: $dark;
 $breadcrumb-active-color: #03A6FF;
 $breadcrumb-divider: "/";
 $breadcrumb-border-radius: 0;
-
 
 // Options
 //
@@ -136,7 +144,7 @@ $enable-grid-classes: true;
 $enable-print-styles: true;
 
 
-
+*/
 //Custom Controls
 $custom-control-indicator-focus-border-color: $success;
 $custom-control-indicator-active-bg: $success;

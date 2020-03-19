@@ -17,6 +17,11 @@ TemplatePages:
 <span class="ds-h4">Checkbox fields</span>
 {% include checkbox.html type="checkbox" text="Online" %}
 {% include checkbox.html type="checkbox" text="Online" Checked="yes" %}
+<span class="ds-h4">Input group</span>
+{% include input-group.html %}
+{% include input-group.html colour="bg-green" %}
+{% include input-group.html colour="bg-white" icon="svg-details" %}
+{% include input-group.html colour="bg-green" extra="yes" %}
 <span class="ds-h4">Buttons</span>
 <button type="button" class="btn btn-primary">Primary</button>
 <br/><br/>
@@ -31,6 +36,8 @@ TemplatePages:
 <button type="button" class="btn btn-info">Info</button>
 <br/><br/>
 <button type="button" class="btn btn-light">Light</button>
+<br/><br/>
+<button type="button" class="btn btn-black">Black</button>
 <br/><br/>
 <button type="button" class="btn btn-dark">Dark</button>
 <span class="ds-h4">Shadow Box</span>
@@ -51,9 +58,22 @@ TemplatePages:
 {% include button-action.html %}
 <br/>
 {% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+<br/>
+{% include button-action.html icon="svg-plus-circle" class="btn-white btn-rounded" text="Add more" %}
+<br/>
+<button type="button" class="btn btn-icon btn-white btn-rounded">Clear Table</button>
 <span class="ds-h4">Ordered Item</span>
 {% include ordered-item.html active="yes" %}
 <br/>
 {% include ordered-item.html name="Hamdog" %}
 <br/>
 {% include cart-item.html %}
+<br/>
+<span class="ds-h4">Order Details</span>
+{% include order-details.html %}
+<br/>
+<span class="ds-h4">Menu Item Details</span>
+{% include menu-item-details.html %}
+<br/>
+<span class="ds-h4">Page Heading</span>
+{% include header.html %}
