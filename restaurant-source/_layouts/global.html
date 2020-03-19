@@ -13,6 +13,11 @@
 {% if page.title == "Offline" %}
 {% assign isOfflinePage = "yes" %}
 {% endif %}
+
+{% assign isDesign = "no" %}
+{% if page.title == "Design System" %}
+{% assign isDesign = "yes" %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +37,18 @@
 <body>
 <div class="mobile-box">
     <div class="container-fluid">
+        {% if isDesign == "yes" %}
         <h1>Design System</h1>
+        {% endif %}
         {{content}}
     </div>
 </div>
+{% if isDesign == "yes" %}
 <div class="container-fluid">
     <span class="ds-h4">Sprite Icons</span>
     {% include sprite.html %}
 </div>
+{% endif %}
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>

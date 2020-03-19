@@ -1,0 +1,79 @@
+---
+layout: global
+title: Design System
+presentation: 'yes'
+---
+<span class="ds-h4">Input fields</span>
+<div class="login-form">
+ {% include input-field.html placeholder="Email" type="email" %}
+ {% include input-field.html placeholder="Password" type="password" %}
+</div>
+<span class="ds-h4">Checkbox fields</span>
+{% include checkbox.html type="checkbox" text="Online" %}
+{% include checkbox.html type="checkbox" text="Online" Checked="yes" %}
+<span class="ds-h4">Input group</span>
+{% include input-group.html %}
+{% include input-group.html colour="bg-green" %}
+{% include input-group.html colour="bg-white" icon="svg-details" %}
+{% include input-group.html colour="bg-green" extra="yes" %}
+<span class="ds-h4">Buttons</span>
+<button type="button" class="btn btn-primary">Primary</button>
+<br/><br/>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<br/><br/>
+<button type="button" class="btn btn-success">Success</button>
+<br/><br/>
+<button type="button" class="btn btn-danger">Danger</button>
+<br/><br/>
+<button type="button" class="btn btn-warning">Warning</button>
+<br/><br/>
+<button type="button" class="btn btn-info">Info</button>
+<br/><br/>
+<button type="button" class="btn btn-light">Light</button>
+<br/><br/>
+<button type="button" class="btn btn-black">Black</button>
+<br/><br/>
+<button type="button" class="btn btn-dark">Dark</button>
+<span class="ds-h4">Shadow Box</span>
+{% include shadow-box.html icon="svg-kitchen" text="Kitchen Icon" %}
+{% include shadow-box.html icon="svg-table-chair-yellow" text="table chair yellow" %}
+<span class="ds-h4">Rooms</span>
+{% include room.html colour="bg-pink" text="Table 01" %}
+{% include room.html colour="bg-green" text="Table 03" %}
+{% include room.html colour="bg-blue" text="Table 11" %}
+{% include room.html colour="bg-black" text="Table 07" %}
+<span class="ds-h4">Menu Items</span>
+<div class="row">
+ <div class="col-6">
+  {% include menu-item.html %}
+ </div>
+</div>
+<span class="ds-h4">Buttons with icon</span>
+{% include button-action.html %}
+<br/>
+{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+<br/>
+{% include button-action.html icon="svg-plus-circle" class="btn-white btn-rounded" text="Add more" %}
+<br/>
+<button type="button" class="btn btn-icon btn-white btn-rounded">Clear Table</button>
+<span class="ds-h4">Ordered Item</span>
+{% include ordered-item.html active="yes" %}
+<br/>
+{% include ordered-item.html name="Hamdog" %}
+<br/>
+{% include cart-item.html %}
+<br/>
+<span class="ds-h4">Order Details</span>
+{% include order-details.html %}
+<br/>
+<span class="ds-h4">Menu Item Details</span>
+{% include menu-item-details.html %}
+<br/>
+<span class="ds-h4">Page Heading</span>
+{% include header.html %}
+<br/>
+<span class="ds-h4">Table Status</span>
+{% include table-status.html %}
+{% include table-status.html state="free" %}
+{% include table-status.html state="kitchen" %}
+{% include table-status.html state="ready" %}

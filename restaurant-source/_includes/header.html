@@ -1,7 +1,8 @@
 {% assign fText = include.text | default: "Menu Items" %}
+{% assign fClass = include.class | default: "" %}
 
-<header class="page-header">
-    <button type="button" class="btn-plain btn-back"><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></button>
+<header class="page-header {{fClass}}">
+    <a href="index.html" class="btn-plain btn-back"><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
     <h1>{{fText}}</h1>
-    <button type="button" class="btn-plain btn-settings"><span class="svg-settings"></span><span class="sr-only">Settings Button</span></button>
+    <a href="settings.html" class="btn-plain btn-settings"><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
 </header>

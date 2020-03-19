@@ -1,0 +1,19 @@
+---
+layout: global
+title: Active Orders
+presentation: 'no'
+---
+{% include header.html text="Orders" %}
+{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+<div class="row">
+    <div class="col-6">
+        <button type="button" class="btn btn-dark">Active</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-white">History</button>
+    </div>
+</div>
+{% include order-details.html %}
+{% include order-details.html %}
+<button type="button" class="btn btn-icon btn-white btn-rounded">Print</button>
+{% include button-action.html icon="svg-plus-circle" class="btn-white btn-rounded" text="Add more" %}

@@ -1,0 +1,30 @@
+---
+layout: global
+title: Check Orders
+presentation: 'no'
+---
+{% include header.html text="Check Order" %}
+
+{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+{% include cart-item.html %}
+{% include cart-item.html %}
+{% include cart-item.html %}
+<div class="form-group">
+    <label for="fieldTextArea" class="sr-only">notes</label>
+    <textarea class="form-control" id="fieldTextArea" placeholder="Type your notes..."></textarea>
+</div>
+{% include checkbox.html type="checkbox" text="Takeaway order" %}
+<div class="row">
+    <div class="col-6">
+        <button type="button" class="btn btn-icon btn-white btn-rounded">Add more</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-icon btn-white btn-rounded">Total: 335,90</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-icon btn-white btn-rounded">Cancel</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-icon btn-primary btn-rounded">Order</button>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 #Set PatternLab to "yes" or "no" if in use or not
-PatternLab: "yes"
+PatternLab: "no"
 #Set RequiredVueJs to "yes" or "no" if in use or not
 RequiredVueJs: "no"
 #DistributeMode value can be "dev" OR "dist"

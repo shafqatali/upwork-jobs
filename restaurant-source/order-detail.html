@@ -1,0 +1,36 @@
+---
+layout: global
+title: Order Detail
+presentation: 'no'
+---
+{% include header.html text="Order details" %}
+
+{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 11" %}
+
+<div class="row">
+    <div class="col-6">
+        <button type="button" class="btn btn-dark">2857061</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-dark"><span class="svg-pound-white"></span>15,90</button>
+    </div>
+    <div class="col-12">
+        <button type="button" class="btn btn-dark"><span class="svg-clock-white"></span>Waiting since 0h 23m</button>
+    </div>
+</div>
+{% include input-group.html colour="bg-white" icon="svg-details" %}
+
+{% include input-group.html colour="bg-white" icon="svg-details" %}
+
+{% include input-group.html %}
+
+<div class="row">
+    <div class="col-6">
+        <button type="button" class="btn btn-primary">Print</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary">Accept order</button>
+    </div>
+</div>
+
+<button type="button" class="btn btn-icon btn-white btn-rounded">Close</button>

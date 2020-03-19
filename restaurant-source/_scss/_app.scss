@@ -6,6 +6,12 @@
     background-color: $lightBg;
   }
 }
+body {
+  background-color: $lightBg;
+  .btn {
+    min-width: 100%;
+  }
+}
 .custom-switch {
   padding: 0;
   .custom-control-label {
@@ -54,6 +60,22 @@
   margin-bottom: 30px;
   background-color: $white;
   position: relative;
+  a {
+    display: block;
+  }
+  h2 {
+    margin: 0;
+    text-align: center;
+    color: $textColor;
+    font-family: $ffOpenSans;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 35px;
+    position: absolute;
+    top: auto;
+    bottom: 15%;
+    width: 100%;
+  }
   span[class*="svg-"] {
     display: block;
     position: absolute;

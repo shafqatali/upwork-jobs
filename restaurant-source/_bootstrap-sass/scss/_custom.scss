@@ -55,8 +55,8 @@ $grid-gutter-width: 30px;
 // Settings for the `<body>` element.;
 $body-bg: #FFFFFF;
 $body-color: $dark;
-$link-color: #FFCC2A;
-$link-hover-color: $link-color;
+$link-color: $primary;
+$link-hover-color: $primary;
 $link-hover-decoration: underline;
 
 // Fonts
