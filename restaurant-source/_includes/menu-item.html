@@ -1,0 +1,10 @@
+{% assign fImage = include.colour | default: "menu-item.png" %}
+{% assign fText = include.text | default: "Main Meat Courses" %}
+
+<div class="menu-item">
+    <div class="media-box">
+        <img src="images/{{fImage}}" alt="menu item image">
+        <a href="#/" class="icon"><span class="sr-only">Add to order</span></a>
+    </div>
+    <span class="name">{{fText}}</span>
+</div>

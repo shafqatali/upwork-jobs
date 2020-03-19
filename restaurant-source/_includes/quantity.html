@@ -1,0 +1,7 @@
+{% assign fColour = include.color | default: "" %}
+{% assign fNumber = include.text | default: "02" %}
+<div class="quantity {{fColour}}">
+    <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
+    <span class="text">{{fNumber}}</span>
+    <button type="button" class="btn-plain plus"><span class="icon btn-plus"></span><span class="sr-only">add one</span></button>
+</div>

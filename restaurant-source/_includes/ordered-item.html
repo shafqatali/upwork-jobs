@@ -1,0 +1,25 @@
+{% assign fActive = include.active | default: "no" %}
+{% assign fName = include.name | default: "Barbecu Burger" %}
+{% assign fDetail = include.detail | default: "Lorem ipsum is simply dummy" %}
+{% assign fPrice = include.price | default: "111,80" %}
+{% assign fCount = include.count | default: "02" %}
+
+{% assign isActive = "" %}
+{% assign buttonColour = "" %}
+{% if fActive == "yes" %}
+{% assign isActive = 'active' %}
+{% assign buttonColour = 'white' %}
+{% endif %}
+
+<div class="ordered-item {{isActive}}">
+    <div class="row">
+        <div class="col-8">
+            <span class="name">{{fName}}</span>
+            <span class="desc">{{fDetail}}</span>
+            <span class="price"><i class="svg-pound"></i>{{fPrice}}</span>
+        </div>
+        <div class="col-4 pl-0">
+            {% include quantity.html text=fCount %}
+        </div>
+    </div>
+</div>
