@@ -24,7 +24,7 @@
   text-align: center !important;
   padding: 10px 0;
   margin: 10px 0;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   text-transform: capitalize;
   &:first-of-type {
     margin-top: 0;
@@ -35,14 +35,13 @@
 }
 
 // Footer
-
 .ds-footer {
   padding: 15px 0;
   display: none !important;
-  a.designed-by{
+  a.designed-by {
     color: $sg-primary;
-    &.external-link{
-      &:after{
+    &.external-link {
+      &:after {
         display: none;
       }
     }
@@ -67,7 +66,7 @@
   p {
     margin-bottom: 10px;
     a {
-      font-size: 1.125rem;
+      font-size: 1.125rem !important;
     }
   }
 }
@@ -93,7 +92,7 @@
   text-align: center !important;
   padding: 10px 0;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   text-transform: capitalize;
 }
 
@@ -109,7 +108,7 @@
     text-align: center !important;
     padding: 10px 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     text-transform: capitalize;
   }
 }
@@ -132,12 +131,12 @@
       margin: 0;
       float: left;
       padding: 100px 10px 10px;
-      line-height: 1.4;
+      line-height: 1.4 !important;
       text-align: center;
       background-color: #d1d1d1;
       border: 1px solid #ffffff;
       width: 15%;
-      font-size: 0.75rem;
+      font-size: 0.75rem !important;
       position: relative;
       height: 160px;
       @media screen and (max-width: $screen-xs) {
@@ -156,7 +155,7 @@
           left: 0;
         }
         &.class-name {
-          font-size: 0.75rem;
+          font-size: 0.75rem !important;
           display: block;
           text-align: center;
           word-wrap: break-word;
@@ -211,14 +210,14 @@
     }
     .color-name {
       margin-top: 6px;
-      font-size: 1rem;
-      line-height: 20px;
+      font-size: 0.8rem !important;
+      line-height: 20px !important;
       font-weight: 700;
       @include fixLines(2, 20px, 0, 1);
     }
     .color-code {
-      font-size: 0.875rem;
-      line-height: 18px;
+      font-size: 0.875rem !important;
+      line-height: 18px !important;
       color: $sg-secondary;
       margin-bottom: 6px;
       text-transform: uppercase;
@@ -235,7 +234,7 @@
   border-radius: 50%;
   padding: 8px 13px;
   color: $sg-primary;
-  font-size: 2rem;
+  font-size: 2rem !important;
   z-index: 999999999999;
   width: 60px;
   height: 60px;
@@ -246,7 +245,7 @@
     top: auto;
     bottom: 10px;
     left: 10px;
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   &:hover,
   &:focus {
@@ -270,9 +269,37 @@
   }
   main {
     min-height: 850px;
-    max-width: none;//initial;
+    max-width: none; //initial;
     @media screen and (max-width: $screen-xs) {
       min-height: 550px;
     }
   }
+}
+
+.ds-padding {
+  padding: 30px 15px !important;
+}
+
+.ds-h4 {
+  display: block;
+  margin: 15px 0 15px;
+  color: #000000;
+  font-size: 20px !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 29px !important;
+  text-transform: uppercase;
+}
+
+.ds-text-styles > .btn {
+  margin-bottom: 25px;
+  @media screen and (max-width: $screen-xs) {
+    margin-bottom: 20px;
+  }
+}
+section > .ds-h4 {
+  display: block;
+  max-width: 1146px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,0 +1,15 @@
+{% assign fType = include.type | default: "checkbox" %}
+{% assign fLabel = include.text | default: "Online" %}
+{% assign checked = include.Checked | default: "no" %}
+{% assign ID = "field[x]" | random %}
+
+{% assign checkedAttr = "" %}
+{% if checked == "yes" %}
+{% assign checkedAttr = 'checked="checked"' %}
+{% endif %}
+<div class="form-group">
+    <div class="custom-control custom-switch">
+        <input type="{{fType}}" class="custom-control-input" id="{{ID}}" {{checkedAttr}}>
+        <label class="custom-control-label" for="{{ID}}">{{fLabel}}</label>
+    </div>
+</div>

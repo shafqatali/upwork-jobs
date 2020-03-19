@@ -20,7 +20,7 @@ nav.ds-main {
   margin: 0 0 0 -15px;
   padding: 20px 20px 0 0 !important;
   width: 200px;
-  font-size: 12px;
+  font-size: 12px !important;
   li.parent {
     font-weight: bold;
     display: block;
@@ -33,13 +33,18 @@ nav.ds-main {
   @media screen and (max-width: $screen-xs) {
     display: none !important;
   }
+  * {
+    line-height: 1.5 !important;
+    font-size: inherit !important;
+    margin-bottom: 0 !important;
+  }
 }
 /* all links */
 .ds-main .nav > li > a {
   border-left: 5px solid transparent;
   padding: 4px 20px;
   color: $sg-secondary;
-  font-size: 13px;
+  font-size: 13px !important;
   font-weight: 400;
   text-decoration: none;
   display: inline-block;
@@ -49,7 +54,7 @@ nav.ds-main {
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 30px;
-  font-size: 12px;
+  font-size: 12px !important;
   text-transform: capitalize;
 }
 /* active & hover links */
@@ -89,10 +94,10 @@ nav.ds-main {
   background: $sg-tertiary;
   cursor: pointer;
   padding: 10px;
-  text-transform: none;
   color: $sg-primary;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-size: 1.87rem !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
   border-left: 5px solid;
   text-transform: capitalize;
   + .ds-notes {
@@ -100,6 +105,9 @@ nav.ds-main {
     padding: 20px 10px;
     border: 1px solid $sg-tertiary;
     border-left: 5px solid;
+  }
+  &:hover {
+    background: $sg-tertiary;
   }
 }
 .ds-sub-title {
@@ -109,9 +117,11 @@ nav.ds-main {
   padding: 10px;
   text-transform: none;
   color: $sg-primary;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.2 !important;
   border-left: 3px solid;
+  font-size: 1.25rem !important;
   + .ds-notes {
     margin-top: -20px;
     padding: 10px;
@@ -119,20 +129,18 @@ nav.ds-main {
     border-left: 3px solid;
   }
 }
-.ds-title:hover {
-  background: $sg-tertiary;
-}
+
 .ds-the-code {
   display: none;
 }
 .ds-view-code {
-  font-size: 10px;
+  font-size: 10px !important;
   user-select: none;
   cursor: pointer;
   display: inline-block;
 }
 .ds-description {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 .ds-group {
   list-style: none;
@@ -182,4 +190,8 @@ nav.ds-main {
   &.show-link {
     display: inline-block;
   }
+}
+
+.ds-elements {
+  line-height: 0;
 }

@@ -1,0 +1,7 @@
+{% assign placeHolder = include.placeholder | default: "Email" %}
+{% assign fType = include.type | default: "email" %}
+{% assign ID = "field[x]" | random %}
+<div class="form-group">
+    <label for="{{ID}}" class="sr-only">Email</label>
+    <input type="{{fType}}" class="form-control" placeholder="{{placeHolder}}" id="{{ID}}">
+</div>

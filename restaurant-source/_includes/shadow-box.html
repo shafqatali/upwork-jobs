@@ -1,0 +1,9 @@
+{% assign fText = include.text | default: "link" %}
+{% assign fIcon = include.icon | default: "svg-kitchen" %}
+
+<div class="square-box">
+    <a href="#/">
+        <span class="sr-only">{{fText}}</span>
+        <span class="{{fIcon}}"></span>
+    </a>
+</div>

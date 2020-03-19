@@ -17,18 +17,18 @@ $danger: #DC3545;
 $light: #b9b9b7;
 $dark: #000000;
 
-$theme-colors: map-merge((
-  "primary":    #e70d4d,
-  "secondary":  #4285f4,
-  "success":    #2db148,
-  "info":       #17A2B8,
-  "warning":    #ffcc2a,
-  "danger":     #DC3545,
-  "light":      #F8F9FA,
-  "dark":       #343A40
-), $theme-colors);
+$theme-colors: (
+        "primary":    #e70d4d,
+        "secondary":  #4285f4,
+        "success":    #2db148,
+        "info":       #17A2B8,
+        "warning":    #ffcc2a,
+        "danger":     #DC3545,
+        "light":      #b9b9b7,
+        "dark":       #000000
+);
 // Grid breakpoints
-//$theme-colors: map-remove($theme-colors, "warning","danger", "light", "dark");
+$theme-colors: map-remove($theme-colors, "warning","danger", "light", "dark", "info");
 $grid-breakpoints: (
         xs: 0,
         sm: 641px,
@@ -59,7 +59,7 @@ $link-hover-decoration: underline;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.;
-$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base: 'Open Sans', sans-serif;
 $font-size-base: 1rem;
 $h1-font-size: 2.25rem;
 $h2-font-size: 1.875rem;
@@ -68,7 +68,7 @@ $h4-font-size: 1.125rem;
 $h5-font-size: 0.875rem;
 $h6-font-size: 0.75rem;
 $line-height-base: 1.6;
-$headings-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Open Sans', sans-serif;
 $headings-font-weight: 500;
 $headings-line-height: 1.1;
 $headings-color: #000000;

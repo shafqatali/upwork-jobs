@@ -69,9 +69,14 @@
  */
   pre,
   code {
-    font-size: 15px;
+    font-size: 15px !important;
     border: 1px solid $sg-tertiary;
     background-color: #edf4f7;
+    * {
+      font-family: inherit !important;
+      font-size: inherit !important;
+      line-height: 1 !important;
+    }
   }
 
   pre {
