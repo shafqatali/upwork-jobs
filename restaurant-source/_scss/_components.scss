@@ -17,17 +17,17 @@
   vertical-align: middle;
 }
 
-.btn-white {
+.badge-white {
   border: 1px solid $white;
   background-color: $white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  &.btn-rounded {
+  &.btn-rounded-xx {
     border-radius: 50px;
     border: 1px solid $greyC4;
     box-shadow: none;
   }
 }
-.btn-light {
+.btn-light-xx {
   border: 1px solid $greyText;
   background-color: $lightBg;
 }

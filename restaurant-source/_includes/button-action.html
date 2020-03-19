@@ -2,7 +2,7 @@
 {% assign fClass = include.class | default: "btn-white" %}
 {% assign fText = include.text | default: "Change View" %}
 
-<button type="button" class="btn btn-icon {{fClass}}">
+<button type="button" class="btn {{fClass}}">
     <span class="icon {{fIcon}}"></span>
     {{ fText}}
 </button>

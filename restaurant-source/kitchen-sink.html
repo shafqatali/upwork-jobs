@@ -18,22 +18,34 @@ presentation: 'yes'
 {% include input-group.html colour="bg-green" extra="yes" %}
 <span class="ds-h4">Buttons</span>
 <button type="button" class="btn btn-primary">Primary</button>
+<br/>
+<div class="badge badge-primary">Primary</div>
 <br/><br/>
 <button type="button" class="btn btn-secondary">Secondary</button>
-<br/><br/>
-<button type="button" class="btn btn-success">Success</button>
-<br/><br/>
-<button type="button" class="btn btn-danger">Danger</button>
-<br/><br/>
-<button type="button" class="btn btn-warning">Warning</button>
-<br/><br/>
-<button type="button" class="btn btn-info">Info</button>
+<br/>
+<div class="badge badge-secondary">Secondary</div>
 <br/><br/>
 <button type="button" class="btn btn-light">Light</button>
+<br/>
+<div class="badge badge-light">Light</div>
 <br/><br/>
-<button type="button" class="btn btn-black">Black</button>
+<button type="button" class="btn btn-white">White</button>
+<br/>
+<div class="badge badge-white">White</div>
 <br/><br/>
 <button type="button" class="btn btn-dark">Dark</button>
+<br/>
+<div class="badge badge-dark">Dark</div>
+
+<span class="ds-h4">Buttons with icon</span>
+{% include button-action.html %}
+<br/>
+{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+<br/>
+{% include button-action.html icon="svg-plus-circle" class="btn-white" text="Add more" %}
+<br/>
+<button type="button" class="btn btn-white">Clear Table</button>
+
 <span class="ds-h4">Shadow Box</span>
 {% include shadow-box.html icon="svg-kitchen" text="Kitchen Icon" %}
 {% include shadow-box.html icon="svg-table-chair-yellow" text="table chair yellow" %}
@@ -48,14 +60,7 @@ presentation: 'yes'
   {% include menu-item.html %}
  </div>
 </div>
-<span class="ds-h4">Buttons with icon</span>
-{% include button-action.html %}
-<br/>
-{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
-<br/>
-{% include button-action.html icon="svg-plus-circle" class="btn-white btn-rounded" text="Add more" %}
-<br/>
-<button type="button" class="btn btn-icon btn-white btn-rounded">Clear Table</button>
+
 <span class="ds-h4">Ordered Item</span>
 {% include ordered-item.html active="yes" %}
 <br/>

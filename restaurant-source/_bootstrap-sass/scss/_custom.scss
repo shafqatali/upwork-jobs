@@ -19,18 +19,14 @@ $black: #000000;
 $dark: #3f3d56;
 
 $theme-colors: (
-        "primary":    $primary,
-        "secondary":  $secondary,
-        "success":    $success,
-        "info":       $info,
-        "warning":    $warning,
-        "danger":     $danger,
-        "light":      $light,
-        "black":      $black,
+        "primary":    #E70D4D,
+        "secondary":  #FFCC2A,
+        "white":  #FFFFFF,
         "dark":       $dark
 );
 // Grid breakpoints
-//$theme-colors: map-remove($theme-colors, "warning","danger", "light", "info");
+$theme-colors: map-remove($theme-colors, "success", "info","warning","danger", "light");
+
 $grid-breakpoints: (
         xs: 0,
         sm: 641px,
@@ -79,6 +75,20 @@ $headings-line-height: 1.1;
 $headings-color: $dark;
 $border-radius: 8px;
 
+//Buttons
+$btn-border-radius: 50px;
+$btn-padding-y: 13px;
+$btn-padding-x: 15px;
+$btn-font-size: 19px;
+$btn-line-height: 1.1;
+$btn-font-weight: 400;
+
+//Badges
+$badge-border-radius: 8px;
+$badge-padding-y: 13px;
+$badge-padding-x: 15px;
+$badge-font-size: 19px;
+$badge-font-weight: 400;
 /*
 
 // Tables

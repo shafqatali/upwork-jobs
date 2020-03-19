@@ -1,0 +1,43 @@
+.btn {
+  min-width: 100%;
+  margin-bottom: 10px;
+  &.btn-primary {
+    min-width: 100%;
+  }
+  &.btn-secondary {
+    color: $white;
+  }
+  &.btn-light {
+    border: 1px solid $primary;
+    background-color: $white;
+    &.no-bg {
+      background-color: transparent;
+    }
+  }
+  &.btn-white {
+    border: 1px solid $greyC4;
+    background-color: $white;
+  }
+}
+
+.badge {
+  min-width: 100%;
+  line-height: 1.1;
+  &.badge-primary {
+    min-width: 100%;
+  }
+  &.badge-secondary {
+    color: $white;
+  }
+  &.badge-light {
+    border: 1px solid $primary;
+    background-color: $white;
+    &.no-bg {
+      background-color: transparent;
+    }
+  }
+  &.badge-white {
+    border: 1px solid $greyC4;
+    background-color: $white;
+  }
+}
