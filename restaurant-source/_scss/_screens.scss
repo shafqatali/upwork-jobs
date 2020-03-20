@@ -1,4 +1,5 @@
 .login-screen {
+  padding-top: 1px;
   height: 100vh;
   width: 100%;
   background-color: $white;
@@ -52,14 +53,40 @@
         float: right;
       }
     }
-    .new-login {
-      padding: 25px 0 0;
+  }
+  .new-login {
+    padding: 25px 0 0;
+    text-align: center;
+    font-family: $ffOpenSans;
+    font-size: 18px;
+    font-weight: 400;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .logo-box {
+    background: url("imgs/logo.png") no-repeat center center;
+    max-width: 252px;
+    min-height: 252px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    margin: 153px auto 45px;
+  }
+  .inner-box {
+    padding: 0 35px;
+    text-align: center;
+    .text {
       text-align: center;
+      color: $textColor;
       font-family: $ffOpenSans;
-      font-size: 18px;
-      font-weight: 400;
-      p {
-        margin-bottom: 0;
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 27px;
+      span {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+        display: block;
       }
     }
   }
@@ -80,6 +107,26 @@
     }
     &:nth-of-type(odd) {
       padding-right: 5px;
+    }
+  }
+}
+
+.otp-fields {
+  font-size: 0;
+  margin-top: 20px;
+  .form-control {
+    display: inline-block;
+    border-radius: 8px;
+    &.country-code {
+      border-radius: 8px 0 0 8px;
+      border: 1px solid $lightGray;
+      margin-right: 4px;
+      width: 30%;
+    }
+    &.phone-number {
+      border-radius: 0 8px 8px 0;
+      border: 1px solid $lightGray;
+      width: calc(70% - 4px);
     }
   }
 }

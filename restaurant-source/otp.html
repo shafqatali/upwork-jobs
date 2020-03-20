@@ -1,5 +1,22 @@
 ---
 layout: global
-title: OTP
+title: Login
 presentation: 'no'
 ---
+<div class="login-screen">
+    <div class="logo-box">
+        <span class="sr-only">app logo</span>
+    </div>
+    <div class="inner-box">
+        <h1 class="text">Welcome to <span>Online Takeway</span></h1>
+        <div class="form-group otp-fields">
+            <label for="otpCode" class="sr-only">OTP Code</label>
+            <input id="otpCode" type="text" class="form-control" value="" placeholder="Enter OTP">
+        </div>
+        <button type="submit" class="btn btn-secondary">enter</button>
+        <div class="new-login">
+            <p>Haven't received otp yet?</p>
+            <a href="#/">Click here to resend</a>
+        </div>
+    </div>
+</div>

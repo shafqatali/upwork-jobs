@@ -1,5 +1,21 @@
 ---
 layout: global
-title: Number
+title: Login
 presentation: 'no'
 ---
+
+<div class="login-screen">
+    <div class="logo-box">
+        <span class="sr-only">app logo</span>
+    </div>
+    <div class="inner-box">
+        <h1 class="text">Welcome to <span>Online Takeway</span></h1>
+        <div class="form-group otp-fields">
+            <label for="countryCode" class="sr-only">Country Code</label>
+            <input id="countryCode" type="text" class="form-control country-code" value="USA +1" placeholder="USA +1">
+            <label for="phoneNumber" class="sr-only">Phone number</label>
+            <input id="phoneNumber" type="text" class="form-control phone-number" placeholder="Enter phone number">
+        </div>
+        <button type="submit" class="btn btn-secondary">get otp</button>
+    </div>
+</div>
