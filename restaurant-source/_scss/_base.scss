@@ -16,7 +16,7 @@
     }
   }
   &.btn-white {
-    border: 2px solid $greyC4;
+    border: 1px solid $greyC4;
     background-color: $white;
     color: $textColor;
   }
@@ -112,4 +112,27 @@
 
 .form-control {
   text-align: center;
+}
+textarea.form-control {
+  text-align: left;
+  min-height: 129px;
+  border-radius: 8px;
+  border: 1px solid $greyText;
+  background-color: $lightBg;
+  color: $greyText;
+  font-family: $ffOpenSans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.smaller-gap {
+  div[class*="col-"] {
+    &:nth-of-type(odd) {
+      padding-right: 5px;
+    }
+    &:nth-of-type(even){
+      padding-left: 5px;
+    }
+  }
 }

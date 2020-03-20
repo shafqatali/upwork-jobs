@@ -197,16 +197,19 @@
   margin-bottom: 30px;
   min-height: 75px;
   span {
-    &.name {
-      margin-bottom: 10px;
-    }
     &.price {
       display: inline-block;
+      margin: 0;
     }
   }
   .quantity {
     margin: 0;
     display: inline-block;
+  }
+  .btn-plain,
+  .price,
+  .quantity {
+    vertical-align: middle;
   }
 }
 .menu-item-detail,

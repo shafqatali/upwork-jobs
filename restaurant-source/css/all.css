@@ -7782,7 +7782,7 @@ just replace your svg sprite and modify these classes.
     .btn.btn-light.no-bg {
       background-color: transparent; }
   .btn.btn-white {
-    border: 2px solid #C4C4C4;
+    border: 1px solid #C4C4C4;
     background-color: #FFFFFF;
     color: #484848; }
 
@@ -7854,6 +7854,24 @@ just replace your svg sprite and modify these classes.
 
 .form-control {
   text-align: center; }
+
+textarea.form-control {
+  text-align: left;
+  min-height: 129px;
+  border-radius: 8px;
+  border: 1px solid #3F3D56;
+  background-color: #F2F2F4;
+  color: #3F3D56;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px; }
+
+.smaller-gap div[class*="col-"]:nth-of-type(odd) {
+  padding-right: 5px; }
+
+.smaller-gap div[class*="col-"]:nth-of-type(even) {
+  padding-left: 5px; }
 
 .bg-pink {
   background-color: #E70D4D; }
@@ -8030,13 +8048,16 @@ just replace your svg sprite and modify these classes.
 .cart-item {
   margin-bottom: 30px;
   min-height: 75px; }
-  .cart-item span.name {
-    margin-bottom: 10px; }
   .cart-item span.price {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
   .cart-item .quantity {
     margin: 0;
     display: inline-block; }
+  .cart-item .btn-plain,
+  .cart-item .price,
+  .cart-item .quantity {
+    vertical-align: middle; }
 
 .menu-item-detail,
 .order-detail {
