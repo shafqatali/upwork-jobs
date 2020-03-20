@@ -2,9 +2,9 @@
 {% assign fLink = include.link | default: "#/" %}
 {% assign fIcon = include.icon | default: "svg-kitchen" %}
 
-<div class="square-box">
-    <a href="{{fLink}}">
-        <span class="{{fIcon}}"></span>
-        <h2>{{fText}}</h2>
+<div class="choose-box">
+    <a class="item" href="{{fLink}}">
+        <span class="icon {{fIcon}}"></span>
+        <span class="h2 text">{{fText}}</span>
     </a>
 </div>

@@ -23,9 +23,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    {% comment %} Viewport for single mobile breakpoint @641px {% endcomment %}
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Restaurant {{page.title}}</title>
     {% if PresentationCSS == 'yes' %}
     <!--It's temporary CSS only for presentation of HTML page. It should be excluded from actual project Kentico/CMS -->
@@ -36,12 +38,22 @@
 </head>
 <body>
 <div class="mobile-box">
+    {% if isDesign == "yes" %}
     <div class="container-fluid">
-        {% if isDesign == "yes" %}
         <h1>Design System</h1>
-        {% endif %}
         {{content}}
     </div>
+    {% else %}
+    {% if page.title == "Login" %}
+        {{content}}
+    {% else %}
+    <div class="inner-wrapper">
+        <div class="container-fluid">
+            {{content}}
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
 </div>
 {% if isDesign == "yes" %}
 <div class="container-fluid">

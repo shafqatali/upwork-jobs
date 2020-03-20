@@ -9,17 +9,12 @@
 // Color system
 //
 $primary: #E70D4D;
-$secondary: #4285f4;
-$success: #2DB148;
-$info: #17A2B8;
-$warning: #FFCC2A;
-$danger: #DC3545;
-$light: #B9B9B7;
-$black: #000000;
-$dark: #3f3d56;
+$secondary: #FFCC2A;
+$black: #484848;
+$dark: #3F3D56;
 
 $theme-colors: (
-        "primary":    #E70D4D,
+        "primary":    $primary,
         "secondary":  #FFCC2A,
         "white":  #FFFFFF,
         "dark":       $dark
@@ -104,14 +99,19 @@ $table-border-color: #DDDDDD;
 */
 
 // Buttons + Forms
+$input-height: 48px;
+$input-padding-y: 10px;
+$input-padding-x: 15px;
+$input-font-size: 19px;
+$input-line-height: 1;
 $input-bg: #FFFFFF;
-$input-color: $dark;
+$input-color: $black;
 $input-border-color: #C4C4C4;
 $input-border-radius: 50px;
 $input-border-radius-lg: 50px;
 $input-border-radius-sm: 50px;
 $input-focus-border-color: #C4C4C4;
-
+$form-group-margin-bottom: 15px;
 /*
 // Dropdowns
 //

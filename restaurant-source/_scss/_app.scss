@@ -1,7 +1,7 @@
 @media screen and (min-width: $screen-sm) {
   .mobile-box {
-    padding: 50px 0;
-    max-width: 360px;
+    padding: 0 0 100px;
+    max-width: 375px;
     margin: 0 auto 0 60px;
     background-color: $lightBg;
   }
@@ -11,6 +11,10 @@ body {
   .btn {
     min-width: 100%;
   }
+  /*.container-fluid {
+    padding-right: 36px;
+    padding-left: 36px;
+  }*/
 }
 .custom-switch {
   padding: 0;
@@ -50,6 +54,7 @@ body {
 *[class*="svg-"] {
   display: inline-block;
 }
+
 .square-box {
   display: inline-block;
   min-width: 302px;
@@ -59,30 +64,41 @@ body {
   border-radius: 8px;
   margin-bottom: 30px;
   background-color: $white;
+}
+
+.choose-box {
+  min-width: 302px;
+  width: 100%;
+  min-height: 286px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: $white;
   position: relative;
-  a {
-    display: block;
-  }
-  h2 {
-    margin: 0;
-    text-align: center;
-    color: $textColor;
-    font-family: $ffOpenSans;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 35px;
-    position: absolute;
-    top: auto;
-    bottom: 15%;
-    width: 100%;
-  }
-  span[class*="svg-"] {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .icon {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .text {
+      display: block;
+      margin: 0;
+      text-align: center;
+      color: $textColor;
+      font-family: $ffOpenSans;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }

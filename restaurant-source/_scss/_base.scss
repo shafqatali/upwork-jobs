@@ -61,3 +61,14 @@
     margin-top: -3px;
   }
 }
+
+.custom-control.custom-radio {
+  display: inline-block;
+  label {
+    color: $textColor;
+    font-family: $ffOpenSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38px;
+  }
+}

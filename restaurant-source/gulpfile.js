@@ -336,7 +336,7 @@ gulp.task('gulp_delete_jekyll', function (callback) {
 gulp.task('build_jekyll', function (callback) {
     runSequence(
         //'downloadVueFiles',
-        'read_file_lines',
+        //'read_file_lines',
         'gulp_delete_jekyll',
         'process_js',
         'process_css',
@@ -687,7 +687,7 @@ function error_alert(message) {
 //for libupdate
 gulp.task('build_jekyll_libupdate', function (callback) {
     runSequence(
-        'read_file_lines',
+        //'read_file_lines',
         'gulp_delete_jekyll',
         'process_js',
         'process_css',

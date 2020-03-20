@@ -1,0 +1,66 @@
+.login-screen {
+  height: 100vh;
+  width: 100%;
+  background-color: $white;
+  a {
+    display: inline-block;
+    color: $yellow;
+    font-family: $ffOpenSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    min-width: 1px;
+  }
+  .media-box {
+    min-height: 336px;
+    background: url("imgs/app-bg.png") no-repeat center center;
+    background-size: cover;
+  }
+  .content-box {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    min-height: 184px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    background-color: $white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: -93px auto 30px;
+    .text {
+      text-align: center;
+      color: $textColor;
+      font-family: $ffOpenSans;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 35px;
+      span {
+        font-size: 37px;
+        font-weight: 300;
+        line-height: 42px;
+        display: block;
+      }
+    }
+  }
+  .login-form {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    padding: 0 10px 40px;
+    margin: auto;
+    .custom-control.custom-radio {
+      + .forgot-link {
+        float: right;
+      }
+    }
+    .new-login {
+      padding: 25px 0 0;
+      text-align: center;
+      font-family: $ffOpenSans;
+      font-size: 18px;
+      font-weight: 400;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -5,10 +5,10 @@ presentation: 'no'
 ---
 <div class="login-screen">
     <div class="media-box">
-        <img src="images/app-bg.png" alt="app bg image"/>
-        <div class="content-box">
-            <h1>Welcom to <span>Cafe heading</span></h1>
-        </div>
+
+    </div>
+    <div class="content-box">
+        <h1 class="text">Welcom to <span>Cafe heading</span></h1>
     </div>
     <div class="login-form">
         <div class="form-group">
@@ -19,14 +19,17 @@ presentation: 'no'
             <label for="exampleInputPassword1" class="sr-only">Password</label>
             <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
         </div>
-        <div class="form-group form-check">
-            {% include checkbox.html type="checkbox" text="Keep me logged in" %}
-            <a href="#/" class="btn btn-link">Forgot?</a>
+        <div class="form-group">
+            <div class="custom-control custom-radio">
+                <input type="checkbox" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Keep me logged in</label>
+            </div>
+            <a href="#/" class="forgot-link">Forgot?</a>
         </div>
         <button type="submit" class="btn btn-secondary">Login</button>
-    </div>
-    <div>
-        <p>Don't have a account?</p>
-        <a href="#/">Register here</a>
+        <div class="new-login">
+            <p>Don't have a account?</p>
+            <a href="#/">Register here</a>
+        </div>
     </div>
 </div>

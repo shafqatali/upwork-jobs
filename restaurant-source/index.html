@@ -1,64 +1,41 @@
 ---
 layout: global
-title: Restaurant App
+title: App
 presentation: 'yes'
 ###################################
 # This page shows link for all the pages in this project
 ###################################
 separateTemplatePages: false
 TemplatePages:
- - name: "standard-content.html"
+- name: "standard-content.html"
 ---
 <nav class="ds-widgets-list">
- <div class="container">
-  <ul class="flex-column">
-   {% assign pluginsCount = site.data.plugins.items | size %}
-   {% assign pages = site.html_pages | sort: 'path' %}
+    <div class="container">
+        <ul class="flex-column">
+            <li class="nav-item "><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item "><a class="nav-link" href="choose.html">Choose</a></li>
+            <li class="nav-item "><a class="nav-link" href="settings.html">Settings</a></li>
 
-   {% for file in pages %}
+            <li class="nav-item "><a class="nav-link" href="table-status-view-a.html">Table status view a</a></li>
+            <li class="nav-item "><a class="nav-link" href="table-status-view-b.html">Table status view b</a></li>
+            <li class="nav-item "><a class="nav-link" href="table-status-view-c.html">Table status view c</a></li>
 
-   {% assign filteredList = site.data.config.excludePagesFromIndexList | where:"name", file.path %}
-   {% assign filterCount = filteredList | size %}
+            <li class="nav-item "><a class="nav-link" href="new-order.html">New order</a></li>
+            <li class="nav-item "><a class="nav-link" href="homemade.html">Homemade</a></li>
 
-   {% if page.separateTemplatePages == true %}
-   {% assign templateList = page.TemplatePages | where:"name", file.path %}
-   {% assign templateCount = templateList | size %}
-   {% else %}
-   {% assign templateCount = 0 %}
-   {% endif %}
+            <li class="nav-item "><a class="nav-link" href="check-order.html">Check order</a></li>
+            <li class="nav-item "><a class="nav-link" href="active-order.html">Active order</a></li>
+            <li class="nav-item "><a class="nav-link" href="history-order.html">History order</a></li>
 
-   {% if filterCount == 0 and templateCount == 0 %}
+            <li class="nav-item "><a class="nav-link" href="kitchen-new-order.html">Kitchen new order</a></li>
+            <li class="nav-item "><a class="nav-link" href="order-detail-accept.html">Order detail accept</a></li>
+            <li class="nav-item "><a class="nav-link" href="order-detail-supply.html">Order detail supply</a></li>
 
-   {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
+            <li class="nav-item "><a class="nav-link" href="menu-items.html">Menu items</a></li>
+            <li class="nav-item "><a class="nav-link" href="number.html">Number</a></li>
+            <li class="nav-item "><a class="nav-link" href="otp.html">Otp</a></li>
 
-   {% assign widgetsClass = '' %}
-   {% if page-name == 'widgets' and pluginsCount == 0 %}
-   {% assign widgetsClass = ' d-none' %}
-   {% endif %}
-
-   <li class="nav-item {{widgetsClass}}"><a class="nav-link" href="{{ file.path }}">{{ page-name | capitalize }}</a></li>
-
-   {% endif %}
-   {% endfor %}
-
-   {% if page.separateTemplatePages == true %}
-   <!-- LIST Base template pages -->
-   <li style="list-style: none;"><br/><b>HTML pages from Base template</b><br/><br/></li>
-
-   {% for file in pages %}
-
-   {% assign templateList = page.TemplatePages | where:"name", file.path %}
-   {% assign templateCount = templateList | size %}
-
-   {% if templateCount == 1 %}
-   {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
-   {% assign page-name = page-name | replace: 'bs ', 'Bootstrap '%}
-
-   <li class="nav-item"><a class="nav-link" href="{{ file.path }}">{{ page-name | capitalize }}</a></li>
-
-   {% endif %}
-   {% endfor %}
-   {% endif %}
-  </ul>
- </div>
+            <li class="nav-item "><a class="nav-link" href="kitchen-sink.html">Kitchen sink</a></li>
+        </ul>
+    </div>
 </nav>
