@@ -7809,7 +7809,11 @@ just replace your svg sprite and modify these classes.
     border: 1px solid #3F3D56;
     color: #3F3D56; }
   .badge.smaller {
-    padding: 5px 8px; }
+    padding: 5px 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px; }
 
 .btn *[class*="svg-"],
 .badge *[class*="svg-"] {
@@ -8095,7 +8099,7 @@ textarea.form-control {
     position: absolute;
     display: block;
     top: 0;
-    right: 15px;
+    right: 5px;
     bottom: 0;
     left: auto;
     margin: auto;
@@ -8105,8 +8109,8 @@ textarea.form-control {
     .menu-item-detail .buttons-wrapper .badge-dark {
       position: absolute;
       top: auto;
-      right: 0;
-      bottom: 15px;
+      right: 15px;
+      bottom: 20px;
       left: auto;
       margin: auto;
       white-space: nowrap; }
