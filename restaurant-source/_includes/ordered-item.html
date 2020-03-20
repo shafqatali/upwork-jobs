@@ -13,12 +13,12 @@
 
 <div class="ordered-item {{isActive}}">
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 column-one">
             <span class="name">{{fName}}</span>
             <span class="desc">{{fDetail}}</span>
             <span class="price"><i class="svg-pound"></i>{{fPrice}}</span>
         </div>
-        <div class="col-4 pl-0">
+        <div class="col-4 column-two">
             {% include quantity.html text=fCount %}
         </div>
     </div>

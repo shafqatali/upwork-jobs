@@ -1,7 +1,7 @@
-{% assign fColour = include.colour | default: "pink" %}
+{% assign fColour = include.colour | default: "occupied" %}
 {% assign fText = include.text | default: "Table 01" %}
 
-<div class="room {{fColour}}">
+<div class="room-table {{fColour}}">
     <span class="svg-table-chair-white"></span>
     <span>{{fText}}</span>
 </div>

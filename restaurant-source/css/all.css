@@ -358,15 +358,15 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "Open Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
-  color: #3F3D56; }
+  color: #484848; }
 
 h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 1.4375rem; }
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -7782,7 +7782,7 @@ just replace your svg sprite and modify these classes.
     .btn.btn-light.no-bg {
       background-color: transparent; }
   .btn.btn-white {
-    border: 1px solid #C4C4C4;
+    border: 2px solid #C4C4C4;
     background-color: #FFFFFF;
     color: #484848; }
 
@@ -7801,8 +7801,9 @@ just replace your svg sprite and modify these classes.
     .badge.badge-light.no-bg {
       background-color: transparent; }
   .badge.badge-white {
-    border: 1px solid #C4C4C4;
-    background-color: #FFFFFF; }
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
   .badge.badge-border-only {
     background-color: transparent;
     border: 1px solid #3F3D56;
@@ -7813,7 +7814,7 @@ just replace your svg sprite and modify these classes.
 .btn *[class*="svg-"],
 .badge *[class*="svg-"] {
   vertical-align: middle;
-  margin-top: -3px; }
+  margin: -3px 5px 0 0; }
 
 .custom-switch {
   padding: 0;
@@ -7871,12 +7872,7 @@ just replace your svg sprite and modify these classes.
   border: none;
   vertical-align: middle; }
 
-.badge-white {
-  border: 1px solid #FFFFFF;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
-
-.room {
+.room-table {
   width: 88px;
   min-height: 89px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -7890,10 +7886,20 @@ just replace your svg sprite and modify these classes.
   font-size: 18px;
   font-weight: 400;
   line-height: 22px; }
-  .room span {
+  .room-table span {
     display: inline-block; }
-    .room span[class*="svg-"] {
+    .room-table span[class*="svg-"] {
       margin-bottom: 5px; }
+  .room-table.free {
+    background-color: #2DB148; }
+  .room-table.kitchen {
+    background-color: #3F3D56; }
+  .room-table.ready {
+    background-color: #4285F4; }
+  .room-table.occupied {
+    background-color: #E70D4D; }
+  .room-table:nth-child(3n + 3) {
+    margin-right: 0; }
 
 .menu-item {
   display: inline-block; }
@@ -7949,7 +7955,8 @@ just replace your svg sprite and modify these classes.
     margin-right: 5px; }
 
 .quantity {
-  margin: 15px 0 0; }
+  font-size: 0;
+  margin: 20px 0 0; }
   .quantity .btn-plain,
   .quantity .text {
     vertical-align: middle;
@@ -7965,12 +7972,19 @@ just replace your svg sprite and modify these classes.
 
 .cart-item,
 .ordered-item {
-  padding: 8px 15px;
+  padding: 13px 12px 10px;
   min-height: 88px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #FFFFFF;
   margin-bottom: 30px; }
+  .cart-item .column-one,
+  .ordered-item .column-one {
+    padding-right: 0; }
+  .cart-item .column-two,
+  .ordered-item .column-two {
+    padding: 0 6px;
+    text-align: right; }
   .cart-item span,
   .ordered-item span {
     display: block;
@@ -7982,9 +7996,12 @@ just replace your svg sprite and modify these classes.
     .cart-item span.desc,
     .ordered-item span.desc {
       font-size: 13px; }
-    .cart-item span.price i,
-    .ordered-item span.price i {
-      vertical-align: middle; }
+    .cart-item span.price,
+    .ordered-item span.price {
+      margin: 5px 0 0; }
+      .cart-item span.price i,
+      .ordered-item span.price i {
+        vertical-align: middle; }
   .cart-item.active,
   .ordered-item.active {
     background-color: #E70D4D; }
@@ -7993,6 +8010,7 @@ just replace your svg sprite and modify these classes.
       color: #FFFFFF; }
       .cart-item.active span.price i,
       .ordered-item.active span.price i {
+        margin-right: 8px;
         background: url("svg/sprite.svg") 77.09605% 91.14233% no-repeat;
         width: 23px;
         height: 23px; }
@@ -8121,7 +8139,7 @@ just replace your svg sprite and modify these classes.
 .table-status {
   background-color: #FFFFFF;
   min-height: 88px;
-  padding: 10px 15px;
+  padding: 15px 15px 5px;
   margin-bottom: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -8130,7 +8148,6 @@ just replace your svg sprite and modify these classes.
     content: "";
     width: 9px;
     height: 100%;
-    background-color: #E70D4D;
     position: absolute;
     top: 0;
     right: auto;
@@ -8139,9 +8156,10 @@ just replace your svg sprite and modify these classes.
     margin: auto;
     border-radius: 8px 0 0 8px; }
   .table-status div[class*="col-"] {
-    padding-right: 0; }
+    padding-right: 0;
+    padding-left: 0; }
     .table-status div[class*="col-"]:first-of-type {
-      padding-left: 25px; }
+      padding-left: 19px; }
     .table-status div[class*="col-"]:last-of-type {
       padding-right: 10px; }
   .table-status span[class*="svg-"] {
@@ -8155,14 +8173,15 @@ just replace your svg sprite and modify these classes.
     font-weight: 400;
     line-height: 18px; }
   .table-status .time {
-    padding: 8px 6px;
+    padding: 8px 4px;
     float: right;
     display: block;
     text-align: center;
     max-width: 68px;
     min-height: 68px;
     border-radius: 8px;
-    border: 1px solid #3F3D56; }
+    border: 1px solid #3F3D56;
+    margin: -5px 0 0; }
     .table-status .time .text {
       margin-bottom: 0; }
   .table-status.free:before {
@@ -8171,6 +8190,8 @@ just replace your svg sprite and modify these classes.
     background-color: #3F3D56; }
   .table-status.ready:before {
     background-color: #4285F4; }
+  .table-status.occupied:before {
+    background-color: #E70D4D; }
 
 @media screen and (min-width: 641px) {
   .mobile-box {
@@ -8183,9 +8204,9 @@ body {
   background-color: #F2F2F4; }
   body .btn {
     min-width: 100%; }
-  body .inner-wrapper .container-fluid, body .inner-wrapper .container-sm, body .inner-wrapper .container-md, body .inner-wrapper .container-lg, body .inner-wrapper .container-xl {
-    padding-right: 36px;
-    padding-left: 36px; }
+  body .inner-wrapper {
+    padding-left: 21px;
+    padding-right: 21px; }
 
 *[class*="svg-"] {
   display: inline-block; }
@@ -8288,5 +8309,14 @@ body {
 
 .form-settings {
   text-align: center; }
+
+.tables-wrapper {
+  font-size: 0; }
+
+.menu-items-row > .col-6:nth-of-type(even) {
+  padding-left: 5px; }
+
+.menu-items-row > .col-6:nth-of-type(odd) {
+  padding-right: 5px; }
 
 /*# sourceMappingURL=all.css.map */

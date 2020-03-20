@@ -16,7 +16,7 @@
     }
   }
   &.btn-white {
-    border: 1px solid $greyC4;
+    border: 2px solid $greyC4;
     background-color: $white;
     color: $textColor;
   }
@@ -41,8 +41,9 @@
     }
   }
   &.badge-white {
-    border: 1px solid $greyC4;
+    border: 1px solid $white;
     background-color: $white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
   &.badge-border-only {
     background-color: transparent;
@@ -58,7 +59,7 @@
 .badge {
   *[class*="svg-"] {
     vertical-align: middle;
-    margin-top: -3px;
+    margin: -3px 5px 0 0;
   }
 }
 

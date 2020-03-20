@@ -7,25 +7,25 @@ presentation: 'no'
 {% include button-action.html class="badge badge-white" %}
 <h2>Main Room</h2>
 <div class="row">
-    <div class="col-12">
-        {% include room.html colour="bg-pink" text="Table 01" %}
-        {% include room.html colour="bg-pink" text="Table 02" %}
-        {% include room.html colour="bg-green" text="Table 07" %}
-        {% include room.html colour="bg-black" text="Table 03" %}
-        {% include room.html colour="bg-blue" text="Table 11" %}
-        {% include room.html colour="bg-pink" text="Table 12" %}
+    <div class="col-12 tables-wrapper">
+        {% include room.html colour="occupied" text="Table 01" %}
+        {% include room.html colour="occupied" text="Table 02" %}
+        {% include room.html colour="free" text="Table 07" %}
+        {% include room.html colour="kitchen" text="Table 03" %}
+        {% include room.html colour="ready" text="Table 11" %}
+        {% include room.html colour="occupied" text="Table 12" %}
     </div>
 </div>
 <h2>Side room</h2>
 <div class="row">
     <div class="col-12">
-        {% include room.html colour="bg-green" text="Table 04" %}
+        {% include room.html colour="free" text="Table 04" %}
     </div>
 </div>
 <h2>Poolside</h2>
 <div class="row">
     <div class="col-12">
-        {% include room.html colour="bg-pink" text="Table 05" %}
-        {% include room.html colour="bg-pink" text="Table 08" %}
+        {% include room.html colour="occupied" text="Table 05" %}
+        {% include room.html colour="occupied" text="Table 08" %}
     </div>
 </div>
