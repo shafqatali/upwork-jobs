@@ -1,0 +1,24 @@
+---
+layout: global
+title: New order
+presentation: 'no'
+---
+{% include header.html text="New orders" %}
+
+<h2>New Table Orders:</h2>
+
+<div class="row">
+    <div class="col-12">
+        {% include room.html colour="bg-green" text="Table 01" %}
+        {% include room.html colour="bg-green" text="Table 02" %}
+        {% include room.html colour="bg-green" text="Table 03" %}
+        {% include room.html colour="bg-green" text="Table 07" %}
+        {% include room.html colour="bg-green" text="Table 11" %}
+    </div>
+</div>
+<h2>Orders being prepared</h2>
+<div class="row">
+    <div class="col-12">
+        {% include room.html colour="bg-green" text="Table 04" %}
+    </div>
+</div>

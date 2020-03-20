@@ -18,34 +18,29 @@ presentation: 'yes'
 {% include input-group.html colour="bg-green" extra="yes" %}
 <span class="ds-h4">Buttons</span>
 <button type="button" class="btn btn-primary">Primary</button>
-<br/>
-<div class="badge badge-primary">Primary</div>
 <br/><br/>
 <button type="button" class="btn btn-secondary">Secondary</button>
-<br/>
-<div class="badge badge-secondary">Secondary</div>
 <br/><br/>
 <button type="button" class="btn btn-light">Light</button>
-<br/>
-<div class="badge badge-light">Light</div>
 <br/><br/>
 <button type="button" class="btn btn-white">White</button>
-<br/>
-<div class="badge badge-white">White</div>
 <br/><br/>
 <button type="button" class="btn btn-dark">Dark</button>
-<br/>
-<div class="badge badge-dark">Dark</div>
 
 <span class="ds-h4">Buttons with icon</span>
-{% include button-action.html %}
+{% include button-action.html icon="svg-table-chair" class="badge badge-border-only" text="Table 03" %}
 <br/>
-{% include button-action.html icon="svg-table-chair" class="btn-light" text="Table 03" %}
+{% include button-action.html icon="svg-plus-circle" class="btn btn-white" text="Add more" %}
 <br/>
-{% include button-action.html icon="svg-plus-circle" class="btn-white" text="Add more" %}
+{% include button-action.html class="badge badge-white" %}
 <br/>
-<button type="button" class="btn btn-white">Clear Table</button>
-
+{% include button-action.html icon="svg-table-chair" class="badge badge-white" text="Table 03" %}
+<br/>
+{% include button-action.html icon="svg-clock" class="badge badge-dark" text="Waiting since 0h 23m" %}
+<br/>
+<button class="badge badge-white">History</button>
+<br/>
+<button class="badge badge-dark">2857061</button>
 <span class="ds-h4">Shadow Box</span>
 {% include shadow-box.html icon="svg-kitchen" text="Kitchen Icon" %}
 {% include shadow-box.html icon="svg-table-chair-yellow" text="table chair yellow" %}

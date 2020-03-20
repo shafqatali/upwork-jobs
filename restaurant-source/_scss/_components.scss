@@ -21,16 +21,8 @@
   border: 1px solid $white;
   background-color: $white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  &.btn-rounded-xx {
-    border-radius: 50px;
-    border: 1px solid $greyC4;
-    box-shadow: none;
-  }
 }
-.btn-light-xx {
-  border: 1px solid $greyText;
-  background-color: $lightBg;
-}
+
 .room {
   width: 88px;
   min-height: 89px;
@@ -137,6 +129,7 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: $white;
+  margin-bottom: 30px;
   span {
     display: block;
     color: $greyText;
@@ -241,7 +234,7 @@
     width: 45px;
     height: 100%;
     padding: 15px 0;
-    .btn-dark {
+    .badge-dark {
       position: absolute;
       top: auto;
       right: 0;

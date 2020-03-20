@@ -1,0 +1,22 @@
+---
+layout: global
+title: Table Status View B
+presentation: 'no'
+---
+{% include header.html text="Table status" %}
+{% include button-action.html class="badge badge-white" %}
+<h2>Main Room</h2>
+<div class="row">
+    <div class="col-12">
+        {% include table-status.html %}
+        {% include table-status.html state="free" %}
+        {% include table-status.html state="kitchen" %}
+        {% include table-status.html state="ready" %}
+    </div>
+</div>
+<h2>Side room</h2>
+<div class="row">
+    <div class="col-12">
+        {% include table-status.html state="free" %}
+    </div>
+</div>

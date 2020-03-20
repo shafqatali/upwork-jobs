@@ -10,6 +10,7 @@
   &.btn-light {
     border: 1px solid $primary;
     background-color: $white;
+    color: $primary;
     &.no-bg {
       background-color: transparent;
     }
@@ -17,12 +18,15 @@
   &.btn-white {
     border: 1px solid $greyC4;
     background-color: $white;
+    color: $textColor;
   }
 }
 
 .badge {
   min-width: 100%;
   line-height: 1.1;
+  margin-bottom: 10px;
+  border: none;
   &.badge-primary {
     min-width: 100%;
   }
@@ -39,5 +43,21 @@
   &.badge-white {
     border: 1px solid $greyC4;
     background-color: $white;
+  }
+  &.badge-border-only {
+    background-color: transparent;
+    border: 1px solid $greyText;
+    color: $greyText;
+  }
+  &.smaller {
+    padding: 5px 8px;
+  }
+}
+
+.btn,
+.badge {
+  *[class*="svg-"] {
+    vertical-align: middle;
+    margin-top: -3px;
   }
 }
