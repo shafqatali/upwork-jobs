@@ -62,6 +62,42 @@
   }
 }
 
+.custom-switch {
+  padding: 0;
+  margin-bottom: 25px;
+  .custom-control-label {
+    padding-right: 60px;
+    font-size: 23px;
+    font-weight: 300;
+    color: $textColor;
+    &:after,
+    &:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      display: block;
+      margin: auto;
+    }
+    &:before {
+      width: 55px;
+      height: 31px;
+    }
+    &:after {
+      width: 18px;
+      height: 18px;
+      right: 8px;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &:after {
+      transform: none;
+      right: 30px;
+      background-color: $white;
+    }
+  }
+}
+
 .custom-control.custom-radio {
   display: inline-block;
   label {
@@ -71,4 +107,8 @@
     font-weight: 400;
     line-height: 38px;
   }
+}
+
+.form-control {
+  text-align: center;
 }

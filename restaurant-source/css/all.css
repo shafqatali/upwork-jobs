@@ -1740,7 +1740,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 300;
   color: #3F3D56;
   text-align: center;
   vertical-align: middle;
@@ -7815,6 +7815,33 @@ just replace your svg sprite and modify these classes.
   vertical-align: middle;
   margin-top: -3px; }
 
+.custom-switch {
+  padding: 0;
+  margin-bottom: 25px; }
+  .custom-switch .custom-control-label {
+    padding-right: 60px;
+    font-size: 23px;
+    font-weight: 300;
+    color: #484848; }
+    .custom-switch .custom-control-label:after, .custom-switch .custom-control-label:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      display: block;
+      margin: auto; }
+    .custom-switch .custom-control-label:before {
+      width: 55px;
+      height: 31px; }
+    .custom-switch .custom-control-label:after {
+      width: 18px;
+      height: 18px;
+      right: 8px; }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
+    transform: none;
+    right: 30px;
+    background-color: #FFFFFF; }
+
 .custom-control.custom-radio {
   display: inline-block; }
   .custom-control.custom-radio label {
@@ -7823,6 +7850,9 @@ just replace your svg sprite and modify these classes.
     font-size: 18px;
     font-weight: 400;
     line-height: 38px; }
+
+.form-control {
+  text-align: center; }
 
 .bg-pink {
   background-color: #E70D4D; }
@@ -8049,7 +8079,10 @@ just replace your svg sprite and modify these classes.
   .page-header .btn-plain {
     vertical-align: middle; }
   .page-header .btn-plain {
-    width: 60px; }
+    width: 60px;
+    display: inline-block; }
+    .page-header .btn-plain.btn-settings {
+      text-align: right; }
   .page-header h1 {
     margin: 0;
     text-align: center;
@@ -8141,45 +8174,18 @@ just replace your svg sprite and modify these classes.
 
 @media screen and (min-width: 641px) {
   .mobile-box {
-    padding: 0 0 100px;
+    padding: 30px 0 100px;
     max-width: 375px;
     margin: 0 auto 0 60px;
     background-color: #F2F2F4; } }
 
 body {
-  background-color: #F2F2F4;
-  /*.container-fluid {
-    padding-right: 36px;
-    padding-left: 36px;
-  }*/ }
+  background-color: #F2F2F4; }
   body .btn {
     min-width: 100%; }
-
-.custom-switch {
-  padding: 0; }
-  .custom-switch .custom-control-label {
-    padding-right: 60px;
-    font-size: 23px;
-    font-weight: 400;
-    color: #484848; }
-    .custom-switch .custom-control-label:after, .custom-switch .custom-control-label:before {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      display: block;
-      margin: auto; }
-    .custom-switch .custom-control-label:before {
-      width: 55px;
-      height: 31px; }
-    .custom-switch .custom-control-label:after {
-      width: 18px;
-      height: 18px;
-      right: 8px; }
-  .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
-    transform: none;
-    right: 30px;
-    background-color: #FFFFFF; }
+  body .inner-wrapper .container-fluid, body .inner-wrapper .container-sm, body .inner-wrapper .container-md, body .inner-wrapper .container-lg, body .inner-wrapper .container-xl {
+    padding-right: 36px;
+    padding-left: 36px; }
 
 *[class*="svg-"] {
   display: inline-block; }
@@ -8279,5 +8285,8 @@ body {
       font-weight: 400; }
       .login-screen .login-form .new-login p {
         margin-bottom: 0; }
+
+.form-settings {
+  text-align: center; }
 
 /*# sourceMappingURL=all.css.map */

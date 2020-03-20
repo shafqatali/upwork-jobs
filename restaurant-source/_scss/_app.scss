@@ -1,6 +1,6 @@
 @media screen and (min-width: $screen-sm) {
   .mobile-box {
-    padding: 0 0 100px;
+    padding: 30px 0 100px;
     max-width: 375px;
     margin: 0 auto 0 60px;
     background-color: $lightBg;
@@ -11,42 +11,10 @@ body {
   .btn {
     min-width: 100%;
   }
-  /*.container-fluid {
-    padding-right: 36px;
-    padding-left: 36px;
-  }*/
-}
-.custom-switch {
-  padding: 0;
-  .custom-control-label {
-    padding-right: 60px;
-    font-size: 23px;
-    font-weight: 400;
-    color: $textColor;
-    &:after,
-    &:before {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      display: block;
-      margin: auto;
-    }
-    &:before {
-      width: 55px;
-      height: 31px;
-    }
-    &:after {
-      width: 18px;
-      height: 18px;
-      right: 8px;
-    }
-  }
-  .custom-control-input:checked ~ .custom-control-label {
-    &:after {
-      transform: none;
-      right: 30px;
-      background-color: $white;
+  .inner-wrapper {
+    .container-fluid {
+      padding-right: 36px;
+      padding-left: 36px;
     }
   }
 }

@@ -257,6 +257,10 @@
   }
   .btn-plain {
     width: 60px;
+    display: inline-block;
+    &.btn-settings {
+      text-align: right;
+    }
   }
   h1 {
     margin: 0;
