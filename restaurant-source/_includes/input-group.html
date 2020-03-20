@@ -1,17 +1,25 @@
+{% assign fText = include.text | default: "" %}
 {% assign fColour = include.colour | default: "" %}
-{% assign fIcon = include.icon | default: "svg-tick-circle" %}
+{% assign fIcon = include.icon | default: "" %}
 {% assign fExtra = include.extra | default: "no" %}
+{% assign fPlaceholder = include.placeholder | default: "New order!" %}
 
 <div class="form-group">
     <div class="input-group {{fColour}}">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" placeholder="{{fPlaceholder}}" aria-label="input button">
         {% if fExtra == "yes" %}
         <div class="input-group-append multi">
-            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+            <button class="input-group-text" type="button"><span class="svg-details"></span></button>
         </div>
         {% endif %}
+        {% if fIcon == "" %}
         <div class="input-group-append">
-            <button  class="input-group-text" type="button"><span class="{{fIcon}}"></span></button>
+            <button class="input-group-text" type="button">{{fText}}</button>
         </div>
+        {% else %}
+        <div class="input-group-append">
+            <button class="input-group-text" type="button"><span class="{{fIcon}}"></span></button>
+        </div>
+        {% endif %}
     </div>
 </div>

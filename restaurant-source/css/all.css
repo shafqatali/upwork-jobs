@@ -7873,18 +7873,20 @@ textarea.form-control {
 .smaller-gap div[class*="col-"]:nth-of-type(even) {
   padding-left: 5px; }
 
+/*
 .bg-pink {
-  background-color: #E70D4D; }
-
+  background-color: $primary;
+}
 .bg-green {
-  background-color: #2DB148; }
-
+  background-color: $green;
+}
 .bg-blue {
-  background-color: #4285F4; }
-
+  background-color: $secondary;
+}
 .bg-black {
-  background-color: #484848; }
-
+  background-color: $textColor;
+}
+*/
 .btn-plain {
   background-color: transparent;
   border: none;
@@ -8156,6 +8158,14 @@ textarea.form-control {
   .input-group.bg-white .input-group-append .input-group-text {
     background-color: #FFFFFF;
     border-left: transparent; }
+  .input-group.bg-pink .form-control {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 0 0 8px;
+    border-color: transparent;
+    text-align: left; }
+  .input-group.bg-pink .input-group-append .input-group-text {
+    background-color: #E70D4D;
+    color: #FFFFFF; }
 
 .table-status {
   background-color: #FFFFFF;

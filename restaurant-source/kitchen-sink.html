@@ -16,10 +16,11 @@ presentation: 'yes'
 {% include checkbox.html type="checkbox" text="Online" %}
 {% include checkbox.html type="checkbox" text="Online" Checked="yes" %}
 <span class="ds-h4">Input group</span>
-{% include input-group.html %}
-{% include input-group.html colour="bg-green" %}
+{% include input-group.html colour="bg-pink" text="Ok" %}
+{% include input-group.html icon="svg-tick-circle" %}
+{% include input-group.html colour="bg-green" icon="svg-tick-circle" %}
 {% include input-group.html colour="bg-white" icon="svg-details" %}
-{% include input-group.html colour="bg-green" extra="yes" %}
+{% include input-group.html colour="bg-green" icon="svg-tick-circle" extra="yes" %}
 <span class="ds-h4">Buttons</span>
 <button type="button" class="btn btn-primary">Primary</button>
 <br/><br/>

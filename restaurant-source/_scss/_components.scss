@@ -1,3 +1,4 @@
+/*
 .bg-pink {
   background-color: $primary;
 }
@@ -10,7 +11,7 @@
 .bg-black {
   background-color: $textColor;
 }
-
+*/
 .btn-plain {
   background-color: transparent;
   border: none;
@@ -339,6 +340,20 @@
       .input-group-text {
         background-color: $white;
         border-left: transparent;
+      }
+    }
+  }
+  &.bg-pink {
+    .form-control {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px 0 0 8px;
+      border-color: transparent;
+      text-align: left;
+    }
+    .input-group-append {
+      .input-group-text {
+        background-color: $primary;
+        color: $white;
       }
     }
   }

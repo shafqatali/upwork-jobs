@@ -1,14 +1,14 @@
 ---
 layout: global
-title: New order
+title: New orders
 presentation: 'no'
 ---
 {% include header.html text="New orders" %}
-
+{% include input-group.html colour="bg-pink" text="Ok" %}
 <h2>New Table Orders:</h2>
 
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 tables-wrapper">
         {% include room.html colour="free" text="Table 01" %}
         {% include room.html colour="free" text="Table 02" %}
         {% include room.html colour="free" text="Table 03" %}
@@ -18,7 +18,7 @@ presentation: 'no'
 </div>
 <h2>Orders being prepared</h2>
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 tables-wrapper">
         {% include room.html colour="free" text="Table 04" %}
     </div>
 </div>
