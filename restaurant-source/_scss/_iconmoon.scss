@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src:  url("../fonts/icomoon.eot?bijvrq");
-  src:  url("../fonts/icomoon.eot?bijvrq#iefix") format("embedded-opentype"),
+  src: url("../fonts/icomoon.eot?bijvrq");
+  src: url("../fonts/icomoon.eot?bijvrq#iefix") format("embedded-opentype"),
   url("../fonts/icomoon.ttf?bijvrq") format("truetype"),
   url("../fonts/icomoon.woff?bijvrq") format("woff"),
   url("../fonts/icomoon.svg?bijvrq#icomoon") format("svg");
@@ -19,64 +19,99 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColor;
 }
 
-.icon-view:before {
-  content: "\e900";
-}
-.icon-tick:before {
-  content: "\e901";
-}
-.icon-table-chair:before {
-  content: "\e902";
-}
-.icon-table:before {
-  content: "\e903";
-}
-.icon-stop:before {
-  content: "\e904";
-}
-.icon-remove:before {
-  content: "\e905";
-}
-.icon-pound:before {
-  content: "\e906";
-}
-.icon-kitchen:before {
-  content: "\e907";
-}
-.icon-info:before {
-  content: "\e908";
-}
-.icon-edit:before {
-  content: "\e909";
-}
-.icon-details:before {
-  content: "\e90a";
-}
-.icon-clock:before {
-  content: "\e90b";
-}
-.icon-chef:before {
-  content: "\e90c";
-}
-.icon-chair:before {
-  content: "\e90d";
-}
 .icon-arrow-back:before {
   content: "\e90e";
+  font-size: 26px;
 }
-.icon-plus:before {
-  content: "\e90f";
+
+.icon-chair:before {
+  content: "\e90d";
+  font-size: 28px;
 }
+
+.icon-chef:before {
+  content: "\e90c";
+  font-size: 24px;
+}
+
+.icon-clock:before {
+  content: "\e90b";
+  font-size: 22px;
+}
+
+.icon-details:before {
+  content: "\e90a";
+  font-size: 23px;
+}
+
+.icon-edit:before {
+  content: "\e909";
+  font-size: 20px;
+}
+
+.icon-info:before {
+  content: "\e908";
+  font-size: 23px;
+}
+
 .icon-minus:before {
   content: "\e910";
+  font-size: 18px;
 }
+
+.icon-plus:before {
+  content: "\e90f";
+  font-size: 18px;
+}
+
+.icon-pound:before {
+  content: "\e906";
+  font-size: 23px;
+}
+
+.icon-remove:before {
+  content: "\e905";
+  font-size: 22px;
+}
+
 .icon-settings:before {
   content: "\e911";
+  font-size: 28px;
 }
+
+.icon-stop:before {
+  content: "\e904";
+  font-size: 22px;
+}
+
+.icon-table:before {
+  content: "\e903";
+  font-size: 27px;
+}
+
+.icon-table-chair:before {
+  content: "\e902";
+  font-size: 46px;
+}
+
+.icon-tick:before {
+  content: "\e901";
+  font-size: 22px;
+}
+
+.icon-view:before {
+  content: "\e900";
+  font-size: 22px;
+}
+
+.icon-kitchen:before {
+  content: "\e907";
+  font-size: 30px;
+}
+

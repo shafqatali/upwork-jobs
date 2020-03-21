@@ -7673,11 +7673,6 @@ just replace your svg sprite and modify these classes.
   width: 23px;
   height: 23px; }
 
-.svg-kitchen {
-  background: url("svg/sprite.svg") 0 99.83784% no-repeat;
-  width: 151px;
-  height: 141.797px; }
-
 .svg-minus {
   background: url("svg/sprite.svg") 97.64402% 44.38% no-repeat;
   width: 17px;
@@ -7743,20 +7738,10 @@ just replace your svg sprite and modify these classes.
   width: 26.119px;
   height: 22.034px; }
 
-.svg-table-chair {
-  background: url("svg/sprite.svg") 85.72954% 13.52837% no-repeat;
-  width: 45.961px;
-  height: 25.114px; }
-
 .svg-table-chair-white {
   background: url("svg/sprite.svg") 88.64654% 0 no-repeat;
   width: 52.708px;
   height: 28.8px; }
-
-.svg-table-chair-yellow {
-  background: url("svg/sprite.svg") 0 0 no-repeat;
-  width: 175.779px;
-  height: 96.047px; }
 
 .svg-tick-circle {
   background: url("svg/sprite.svg") 99.46889% 30.45587% no-repeat;
@@ -7768,10 +7753,127 @@ just replace your svg sprite and modify these classes.
   width: 22px;
   height: 22px; }
 
+.svg-kitchen {
+  background: url("svg/icons.svg") 0 99.83784% no-repeat;
+  width: 151px;
+  height: 141.797px; }
+
+.svg-kitchen-black {
+  background: url("svg/icons.svg") 75.12438% 99.83784% no-repeat;
+  width: 151px;
+  height: 141.797px; }
+
+.svg-table-chair {
+  background: url("svg/icons.svg") 0 0 no-repeat;
+  width: 175.779px;
+  height: 96.047px; }
+
+.svg-table-chair-black {
+  background: url("svg/icons.svg") 99.74918% 0 no-repeat;
+  width: 175.779px;
+  height: 96.047px; }
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?bijvrq");
+  src: url("../fonts/icomoon.eot?bijvrq#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?bijvrq") format("truetype"), url("../fonts/icomoon.woff?bijvrq") format("woff"), url("../fonts/icomoon.svg?bijvrq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #484848; }
+
+.icon-arrow-back:before {
+  content: "\e90e";
+  font-size: 26px; }
+
+.icon-chair:before {
+  content: "\e90d";
+  font-size: 28px; }
+
+.icon-chef:before {
+  content: "\e90c";
+  font-size: 24px; }
+
+.icon-clock:before {
+  content: "\e90b";
+  font-size: 22px; }
+
+.icon-details:before {
+  content: "\e90a";
+  font-size: 23px; }
+
+.icon-edit:before {
+  content: "\e909";
+  font-size: 20px; }
+
+.icon-info:before {
+  content: "\e908";
+  font-size: 23px; }
+
+.icon-minus:before {
+  content: "\e910";
+  font-size: 18px; }
+
+.icon-plus:before {
+  content: "\e90f";
+  font-size: 18px; }
+
+.icon-pound:before {
+  content: "\e906";
+  font-size: 23px; }
+
+.icon-remove:before {
+  content: "\e905";
+  font-size: 22px; }
+
+.icon-settings:before {
+  content: "\e911";
+  font-size: 28px; }
+
+.icon-stop:before {
+  content: "\e904";
+  font-size: 22px; }
+
+.icon-table:before {
+  content: "\e903";
+  font-size: 27px; }
+
+.icon-table-chair:before {
+  content: "\e902";
+  font-size: 46px; }
+
+.icon-tick:before {
+  content: "\e901";
+  font-size: 22px; }
+
+.icon-view:before {
+  content: "\e900";
+  font-size: 22px; }
+
+.icon-kitchen:before {
+  content: "\e907";
+  font-size: 30px; }
+
 .btn {
   min-width: 100%; }
   .btn.btn-primary {
     min-width: 100%; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+      background-color: #484848;
+      border-color: #484848; }
   .btn.btn-secondary {
     color: #FFFFFF;
     text-transform: uppercase; }
@@ -7798,7 +7900,7 @@ just replace your svg sprite and modify these classes.
   line-height: 1.1;
   border: none; }
   .badge.badge-primary {
-    min-width: 100%; }
+    box-sizing: border-box; }
   .badge.badge-secondary {
     color: #FFFFFF; }
   .badge.badge-light {
@@ -8220,6 +8322,9 @@ textarea.form-control {
   .input-group.bg-pink .input-group-append .input-group-text {
     background-color: #E70D4D;
     color: #FFFFFF; }
+    .input-group.bg-pink .input-group-append .input-group-text:hover, .input-group.bg-pink .input-group-append .input-group-text:focus, .input-group.bg-pink .input-group-append .input-group-text:active {
+      background-color: #484848;
+      border-color: #484848; }
 
 .table-status {
   background-color: #FFFFFF;
@@ -8399,6 +8504,8 @@ body {
     .choose-box .item .icon {
       display: block;
       margin-bottom: 10px; }
+      .choose-box .item .icon.icon-hover {
+        display: none; }
     .choose-box .item .text {
       display: block;
       margin: 0;
@@ -8412,6 +8519,10 @@ body {
       text-decoration: none; }
   .choose-box:hover, .choose-box:focus, .choose-box:active {
     background-color: #FFCC2A; }
+    .choose-box:hover .icon, .choose-box:focus .icon, .choose-box:active .icon {
+      display: none; }
+      .choose-box:hover .icon.icon-hover, .choose-box:focus .icon.icon-hover, .choose-box:active .icon.icon-hover {
+        display: block; }
 
 .login-screen {
   padding-top: 1px;
