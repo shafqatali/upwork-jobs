@@ -308,6 +308,7 @@
   border-radius: 8px;
   background-color: $white;
   .form-control {
+    text-align: left;
     border-radius: 8px 0 0 8px;
   }
   .input-group-append {
@@ -433,6 +434,107 @@
   &.occupied {
     &:before{
       background-color: $primary;
+    }
+  }
+}
+
+.ordered-items-details {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: $white;
+  margin-bottom: 30px;
+  font-size: 0;
+  padding: 0 10px 0 0;
+  position: relative;
+  span {
+    color: $greyText;
+    font-family: $ffOpenSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 14px 0;
+  }
+  .badge-white {
+    box-shadow: none;
+    margin: 0;
+    min-width: 1px;
+    padding: 11px 7px;
+    > span {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .row {
+    margin-right: -5px;
+    margin-left: -5px;
+    > div {
+      padding-right: 5px;
+      padding-left: 5px;
+      &:first-of-type {
+        padding-left: 18px;
+      }
+    }
+  }
+  &.heading {
+    span {
+      color: $primary;
+    }
+  }
+  &.supply {
+    padding: 0;
+    .row {
+      > div {
+        &:first-of-type {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+    }
+    .badge-tick {
+      margin: 0;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 0 8px 8px 0;
+      background-color: $lightGray;
+      > span {
+        padding: 0;
+        margin: 0;
+      }
+      &.supplied {
+        background-color: $green;
+      }
+    }
+  }
+  .tooltip.bs-tooltip-bottom {
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    .arrow {
+      opacity: 0;
+    }
+    .tooltip-inner {
+      max-width: none;
+      background-color: $white;
+      color: $greyText;
+      font-family: $ffOpenSans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: left;
+      border-radius: 8px;
+      padding: 15px 15px;
+    }
+    &.show {
+      opacity: 1;
+      top: 50px !important;
+      right: 0;
+      bottom: auto;
+      left: 0 !important;
+      margin: auto;
+      transform: none !important;
     }
   }
 }

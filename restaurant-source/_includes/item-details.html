@@ -1,0 +1,29 @@
+{% assign text = include.item | default: site.data.content.itemDetail %}
+{% assign textColor = include.colour | default: "" %}
+{% assign itemID = "orderItem[x]" | random %}
+<div id="{{itemID}}" class="ordered-items-details {{textColor}}">
+    <div class="row">
+        <div class="col-8">
+            <span>{{text.name}}</span>
+        </div>
+        <div class="col-2"><span>{{text.qty}}</span></div>
+        <div class="col-2">
+            {% if text.iconDetail == "yes" %}
+            <button type="button" class="badge badge-white" data-trigger="click" data-html="true" data-container="#{{itemID}}" data-toggle="tooltip" data-placement="bottom" data-title="{{text.detail}}">
+                <span class="svg-details"></span><span class="sr-only">Details button</span>
+            </button>
+            {% else %}
+            {% if text.detail != "" %}
+            <span>{{text.detail}}</span>
+            {% endif %}
+            {% endif %}
+        </div>
+        {% if text.tickIcon != "" %}
+        <div class="col-2">
+            <button type="button" class="badge badge-tick {{text.tickColor}}">
+                <span class="svg-tick-circle"></span><span class="sr-only">Supply button</span>
+            </button>
+        </div>
+        {% endif %}
+    </div>
+</div>

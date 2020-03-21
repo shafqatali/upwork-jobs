@@ -1,0 +1,42 @@
+itemDetail:
+  name: "(1) Cheeseburger"
+  qty: "01"
+  iconDetail: "yes"
+  detail: "Notes <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+  tickIcon: ""
+  tickColor: ""
+
+itemDetail02:
+  name: "(1) Cheeseburger"
+  qty: "01"
+  iconDetail: "no"
+  detail: ""
+  tickIcon: ""
+  tickColor: ""
+
+itemHeadings:
+  name: "Item name"
+  qty: "Qty"
+  iconDetail: "no"
+  detail: "Notes"
+  tickIcon: ""
+  tickColor: ""
+
+
+itemSupply01:
+  name: "(1) Cheeseburger"
+  qty: "01"
+  iconDetail: "yes"
+  detail: "Notes <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+  tickIcon: "yes"
+  tickColor: "supplied"
+
+
+itemSupply02:
+  name: "(1) Cheeseburger"
+  qty: "01"
+  iconDetail: "no"
+  detail: ""
+  tickIcon: "yes"
+  tickColor: ""
+

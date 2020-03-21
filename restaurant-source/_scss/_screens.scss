@@ -130,3 +130,32 @@
     }
   }
 }
+
+.buttons-wrap {
+  text-align: right;
+  margin-bottom: 30px;
+  .zoom-level {
+    display: inline-block;
+    color: $greyText;
+    font-family: $ffOpenSans;
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .btn-group {
+    display: inline-block;
+    .badge-white {
+      min-width: 48px;
+      width: 48px;
+      border-radius: 0;
+      margin-right: 3px;
+      margin-bottom: 0;
+      &:first-of-type {
+        border-radius: 8px 0 0 8px;
+      }
+      &:last-of-type {
+        border-radius: 0 8px 8px 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
