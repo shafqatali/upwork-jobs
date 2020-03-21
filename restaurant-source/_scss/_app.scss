@@ -49,6 +49,9 @@ body {
     .icon {
       display: block;
       margin-bottom: 10px;
+      &.icon-hover {
+        display: none;
+      }
     }
     .text {
       display: block;
@@ -69,5 +72,11 @@ body {
   &:focus,
   &:active {
     background-color: $yellow;
+    .icon {
+      display: none;
+      &.icon-hover {
+        display: block;
+      }
+    }
   }
 }

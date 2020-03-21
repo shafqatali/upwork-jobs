@@ -351,6 +351,12 @@
       .input-group-text {
         background-color: $primary;
         color: $white;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $textColor;
+          border-color: $textColor;
+        }
       }
     }
   }

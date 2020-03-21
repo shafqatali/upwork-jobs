@@ -59,12 +59,6 @@ just replace your svg sprite and modify these classes.
   height: 23px;
 }
 
-@mixin svg-kitchen {
-  background: url("svg/sprite.svg") 0 99.83784289471221% no-repeat;
-  width: 151px;
-  height: 141.797px;
-}
-
 @mixin svg-minus {
   background: url("svg/sprite.svg") 97.6440170940171% 44.38% no-repeat;
   width: 17px;
@@ -143,22 +137,10 @@ just replace your svg sprite and modify these classes.
   height: 22.034px;
 }
 
-@mixin svg-table-chair {
-  background: url("svg/sprite.svg") 85.72954413550595% 13.528367295172064% no-repeat;
-  width: 45.961px;
-  height: 25.114px;
-}
-
 @mixin svg-table-chair-white {
   background: url("svg/sprite.svg") 88.64654146410345% 0 no-repeat;
   width: 52.708px;
   height: 28.8px;
-}
-
-@mixin svg-table-chair-yellow {
-  background: url("svg/sprite.svg") 0 0 no-repeat;
-  width: 175.779px;
-  height: 96.047px;
 }
 
 @mixin svg-tick-circle {
@@ -203,10 +185,6 @@ just replace your svg sprite and modify these classes.
 
 .svg-info {
   @include svg-info;
-}
-
-.svg-kitchen {
-  @include svg-kitchen;
 }
 
 .svg-minus {
@@ -261,17 +239,10 @@ just replace your svg sprite and modify these classes.
   @include svg-table;
 }
 
-.svg-table-chair {
-  @include svg-table-chair;
-}
-
 .svg-table-chair-white {
   @include svg-table-chair-white;
 }
 
-.svg-table-chair-yellow {
-  @include svg-table-chair-yellow;
-}
 
 .svg-tick-circle {
   @include svg-tick-circle;

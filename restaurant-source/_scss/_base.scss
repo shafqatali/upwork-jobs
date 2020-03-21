@@ -2,6 +2,12 @@
   min-width: 100%;
   &.btn-primary {
     min-width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $textColor;
+      border-color: $textColor;
+    }
   }
   &.btn-secondary {
     color: $white;
@@ -40,7 +46,7 @@
   line-height: 1.1;
   border: none;
   &.badge-primary {
-    min-width: 100%;
+    box-sizing: border-box;
   }
   &.badge-secondary {
     color: $white;
