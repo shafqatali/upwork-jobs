@@ -21,7 +21,7 @@ $theme-colors: (
 );
 // Grid breakpoints
 $theme-colors: map-remove($theme-colors, "success", "info","warning","danger", "light");
-
+/*
 $grid-breakpoints: (
         xs: 0,
         sm: 641px,
@@ -38,7 +38,7 @@ $container-max-widths: (
         lg: 1170px,
         xl: 1170px
 );
-$grid-gutter-width: 30px;
+$grid-gutter-width: 30px;*/
 
 
 // Body

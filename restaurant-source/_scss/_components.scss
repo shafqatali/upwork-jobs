@@ -345,6 +345,11 @@
     &.btn-settings {
       text-align: right;
     }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
   }
   h1 {
     margin: 0;

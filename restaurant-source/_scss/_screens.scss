@@ -206,3 +206,12 @@
     margin-bottom: 15px !important;
   }
 }
+input[type="submit"],
+input[type="button"],
+.btn {
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+  }
+}
