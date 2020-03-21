@@ -4,8 +4,8 @@ title: History Order
 presentation: 'no'
 ---
 {% include header.html text="Orders" %}
-{% include button-action.html icon="svg-table-chair" class="badge badge-border-only" text="Table 03" %}
-<div class="row">
+{% include button-action.html icon="icon-table-chair" class="badge badge-border-only" text="Table 03" %}
+<div class="row smaller-gap">
     <div class="col-6">
         <button type="button" class="badge badge-white">Active</button>
     </div>
@@ -15,5 +15,7 @@ presentation: 'no'
 </div>
 {% include order-details.html %}
 <span class="btn btn-light no-bg">Total Amount: 15,90</span>
-<button type="button" class="btn btn-white">Clear Table</button>
-{% include button-action.html icon="svg-plus-circle" class="btn btn-white" text="Add more" %}
+<div class="narrow-buttons">
+    <button type="button" class="btn btn-white">Clear Table</button>
+    {% include button-action.html icon="icon-plus-circle" class="btn btn-white" text="Add more" %}
+</div>

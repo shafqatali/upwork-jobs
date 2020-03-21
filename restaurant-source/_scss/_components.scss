@@ -34,7 +34,8 @@
   line-height: 22px;
   span {
     display: inline-block;
-    &[class*="svg-"] {
+    &[class*="icon-"] {
+      color: $white;
       margin-bottom: 5px;
     }
   }
@@ -75,16 +76,28 @@
       bottom: auto;
       left: auto;
       display: block;
-      &:before {
-        content: "";
+      [class*="icon-"] {
+        width: 28px;
+        height: 28px;
+        background-color: $yellow;
+        display: block;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        display: block;
         margin: auto;
-        @include svg-plus-circle-yellow;
+        &:before {
+          font-size: 14px;
+          margin: 7px 0 0 7px;
+        }
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        [class*="icon-"] {
+          background-color: $textColor;
+        }
       }
     }
   }
@@ -123,12 +136,19 @@
     display: inline-block;
   }
   .btn-plain {
-    .icon {
-      &.btn-minus {
-        @include svg-minus-circle;
+    [class*="icon-"] {
+      &:before {
+        margin: 0;
       }
-      &.btn-plus {
-        @include svg-plus-circle;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      [class*="icon-"] {
+        background-color: $primary;
+        &:before {
+          color: $white;
+        }
       }
     }
   }
@@ -165,6 +185,18 @@
     }
   }
 
+  .btn-remove {
+    &:hover,
+    &:focus,
+    &:active {
+      [class*="icon-"] {
+        &:before {
+          color: $primary;
+        }
+      }
+    }
+  }
+
   &.active {
     background-color: $primary;
     span {
@@ -172,7 +204,28 @@
       &.price {
         i {
           margin-right: 8px;
-          @include svg-pound-white;
+          @extend .icon-pound;
+          color: $white;
+        }
+      }
+    }
+    .quantity {
+      .btn-plain {
+        [class*="icon-"] {
+          background-color: $white;
+          &:before {
+            color: $primary;
+          }
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          [class*="icon-"] {
+            background-color: $textColor;
+            &:before {
+              color: $white;
+            }
+          }
         }
       }
     }
@@ -184,10 +237,10 @@
   .btn-plain {
     .icon {
       &.btn-minus {
-        @include svg-minus-circle-white;
+        @extend .icon-minus-circle;
       }
       &.btn-plus {
-        @include svg-plus-circle-white;
+        @extend .icon-plus-circle;
       }
     }
   }
@@ -262,6 +315,18 @@
       left: auto;
       margin: auto;
       white-space: nowrap;
+    }
+    .btn.btn-plain {
+      padding: 0 !important;
+      margin: 0 0 12px !important;
+      border-radius: 0 !important;
+      &:hover,
+      &:focus,
+      &:active {
+        [class*="icon-"] {
+          background-color: $primary;
+        }
+      }
     }
   }
 }
@@ -391,7 +456,7 @@
       padding-right: 10px;
     }
   }
-  span[class*="svg-"] {
+  span[class*="icon-"] {
     vertical-align: middle;
   }
   .text {
@@ -464,6 +529,15 @@
     > span {
       padding: 0;
       margin: 0;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+      border-color: $white;
+      .icon-details:before {
+        color: $lightGray;
+      }
     }
   }
   .row {

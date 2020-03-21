@@ -1,0 +1,50 @@
+.icon-plus-circle,
+.icon-minus-circle,
+.icon-edit-circle,
+.icon-remove-circle {
+  border-radius: 50%;
+  &:before {
+    display: inline-block;
+    margin: 5px 0 0;
+  }
+}
+.icon-edit-circle {
+  width: 32px;
+  height: 32px;
+  background-color: $textColor;
+  @extend .icon-edit;
+  &:before {
+    color: $white;
+  }
+}
+
+.icon-remove-circle {
+  width: 32px;
+  height: 32px;
+  background-color: $textColor;
+  @extend .icon-remove;
+  &:before {
+    color: $white;
+  }
+}
+
+.icon-minus-circle {
+  width: 22px;
+  height: 22px;
+  background-color: $textColor;
+  @extend .icon-minus;
+  &:before {
+    font-size: 11px;
+    color: $white;
+  }
+}
+.icon-plus-circle {
+  width: 22px;
+  height: 22px;
+  background-color: $textColor;
+  @extend .icon-plus;
+  &:before {
+    font-size: 11px;
+    color: $white;
+  }
+}

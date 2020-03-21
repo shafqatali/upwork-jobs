@@ -1,77 +1,5 @@
-.svg-arrow-back {
-	background: url("svg/sprite.css-69a02daf.svg") 78.28056112224449% 80.53139962400095% no-repeat;
-}
-
-.svg-arrow-back-dims {
-	width: 26.45px;
-	height: 22.042px;
-}
-
-.svg-chair {
-	background: url("svg/sprite.css-69a02daf.svg") 89.15143115809889% 25.531451410495013% no-repeat;
-}
-
-.svg-chair-dims {
-	width: 17.937px;
-	height: 26.833px;
-}
-
-.svg-chef {
-	background: url("svg/sprite.css-69a02daf.svg") 89.56570660032789% 54.966692926966836% no-repeat;
-}
-
-.svg-chef-dims {
-	width: 23.481px;
-	height: 23.481px;
-}
-
-.svg-clock {
-	background: url("svg/sprite.css-69a02daf.svg") 99.7759825327511% 10.185185185185185% no-repeat;
-}
-
-.svg-clock-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-clock-white {
-	background: url("svg/sprite.css-69a02daf.svg") 65.93886462882097% 75.10277777777776% no-repeat;
-}
-
-.svg-clock-white-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-details {
-	background: url("svg/sprite.css-69a02daf.svg") 87.18377192982457% 91.14232558139534% no-repeat;
-}
-
-.svg-details-dims {
-	width: 23px;
-	height: 23px;
-}
-
-.svg-edit {
-	background: url("svg/sprite.css-69a02daf.svg") 80.26438356164384% 26.17184466019418% no-repeat;
-}
-
-.svg-edit-dims {
-	width: 32px;
-	height: 32px;
-}
-
-.svg-info {
-	background: url("svg/sprite.css-69a02daf.svg") 65.9892931279362% 44.50225877447006% no-repeat;
-}
-
-.svg-info-dims {
-	width: 22.175px;
-	height: 22.175px;
-}
-
 .svg-kitchen {
-	background: url("svg/sprite.css-69a02daf.svg") 0 99.83784289471221% no-repeat;
+	background: url("svg/sprite.css-87552daf.svg") 0 99.83784289471221% no-repeat;
 }
 
 .svg-kitchen-dims {
@@ -79,165 +7,30 @@
 	height: 141.797px;
 }
 
-.svg-minus {
-	background: url("svg/sprite.css-69a02daf.svg") 97.6440170940171% 44.38% no-repeat;
+.svg-kitchen-black {
+	background: url("svg/sprite.css-87552daf.svg") 75.12437810945273% 99.83784289471221% no-repeat;
 }
 
-.svg-minus-dims {
-	width: 17px;
-	height: 3px;
-}
-
-.svg-minus-circle {
-	background: url("svg/sprite.css-69a02daf.svg") 65.93886462882097% 54.7324074074074% no-repeat;
-}
-
-.svg-minus-circle-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-minus-circle-white {
-	background: url("svg/sprite.css-69a02daf.svg") 65.93886462882097% 64.91759259259258% no-repeat;
-}
-
-.svg-minus-circle-white-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-plus {
-	background: url("svg/sprite.css-69a02daf.svg") 97.6440170940171% 39.49909502262444% no-repeat;
-}
-
-.svg-plus-dims {
-	width: 17px;
-	height: 17px;
-}
-
-.svg-plus-circle {
-	background: url("svg/sprite.css-69a02daf.svg") 99.7759825327511% 20.37037037037037% no-repeat;
-}
-
-.svg-plus-circle-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-plus-circle-white {
-	background: url("svg/sprite.css-69a02daf.svg") 99.7759825327511% 0 no-repeat;
-}
-
-.svg-plus-circle-white-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-plus-circle-yellow {
-	background: url("svg/sprite.css-69a02daf.svg") 78.82466367713005% 69.48285714285713% no-repeat;
-}
-
-.svg-plus-circle-yellow-dims {
-	width: 28px;
-	height: 28px;
-}
-
-.svg-pound {
-	background: url("svg/sprite.css-69a02daf.svg") 89.37675438596492% 67.86697674418603% no-repeat;
-}
-
-.svg-pound-dims {
-	width: 23px;
-	height: 23px;
-}
-
-.svg-pound-white {
-	background: url("svg/sprite.css-69a02daf.svg") 77.09605263157896% 91.14232558139534% no-repeat;
-}
-
-.svg-pound-white-dims {
-	width: 23px;
-	height: 23px;
-}
-
-.svg-remove {
-	background: url("svg/sprite.css-69a02daf.svg") 80.26438356164384% 41.70582524271845% no-repeat;
-}
-
-.svg-remove-dims {
-	width: 32px;
-	height: 32px;
-}
-
-.svg-settings {
-	background: url("svg/sprite.css-69a02daf.svg") 78.82466367713005% 56.14952380952381% no-repeat;
-}
-
-.svg-settings-dims {
-	width: 28px;
-	height: 28px;
-}
-
-.svg-stop {
-	background: url("svg/sprite.css-69a02daf.svg") 65.93886462882097% 95.47314814814814% no-repeat;
-}
-
-.svg-stop-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-table {
-	background: url("svg/sprite.css-69a02daf.svg") 89.92711700855118% 80.5284165100062% no-repeat;
-}
-
-.svg-table-dims {
-	width: 26.119px;
-	height: 22.034px;
+.svg-kitchen-black-dims {
+	width: 151px;
+	height: 141.797px;
 }
 
 .svg-table-chair {
-	background: url("svg/sprite.css-69a02daf.svg") 85.72954413550595% 13.528367295172064% no-repeat;
+	background: url("svg/sprite.css-87552daf.svg") 0 0 no-repeat;
 }
 
 .svg-table-chair-dims {
-	width: 45.961px;
-	height: 25.114px;
-}
-
-.svg-table-chair-white {
-	background: url("svg/sprite.css-69a02daf.svg") 88.64654146410345% 0 no-repeat;
-}
-
-.svg-table-chair-white-dims {
-	width: 52.708px;
-	height: 28.8px;
-}
-
-.svg-table-chair-yellow {
-	background: url("svg/sprite.css-69a02daf.svg") 0 0 no-repeat;
-}
-
-.svg-table-chair-yellow-dims {
 	width: 175.779px;
 	height: 96.047px;
 }
 
-.svg-tick-circle {
-	background: url("svg/sprite.css-69a02daf.svg") 99.46888862768658% 30.45586898438906% no-repeat;
+.svg-table-chair-black {
+	background: url("svg/sprite.css-87552daf.svg") 99.74917858824999% 0 no-repeat;
 }
 
-.svg-tick-circle-dims {
-	width: 21.293px;
-	height: 21.293px;
-}
-
-.svg-view {
-	background: url("svg/sprite.css-69a02daf.svg") 65.93886462882097% 85.28796296296295% no-repeat;
-}
-
-.svg-view-dims {
-	width: 22px;
-	height: 22px;
+.svg-table-chair-black-dims {
+	width: 175.779px;
+	height: 96.047px;
 }
 

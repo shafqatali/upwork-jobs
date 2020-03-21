@@ -11,6 +11,11 @@
     font-weight: 400;
     line-height: 34px;
     min-width: 1px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $textColor;
+    }
   }
   .media-box {
     min-height: 336px;
@@ -172,5 +177,32 @@
       padding: 11px 0 10px;
       margin-bottom: 0;
     }
+  }
+}
+
+.btn.btn-white {
+  .icon.icon-plus-circle {
+    &:before {
+      display: block;
+      margin: 6px 0 0 !important;
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    .icon.icon-plus-circle {
+      background-color: $white;
+      &:before {
+        color: $textColor;
+      }
+    }
+  }
+}
+
+.narrow-buttons {
+  margin-bottom: 15px;
+  .btn,
+  .badge {
+    margin-bottom: 15px !important;
   }
 }
