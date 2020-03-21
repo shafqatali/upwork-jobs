@@ -26,7 +26,7 @@
   color: $white;
   padding: 14px 8px;
   text-align: center;
-  margin: 0 15px 20px 0;
+  margin-right: 15px;
   display: inline-block;
   font-family: $ffOpenSans;
   font-size: 18px;
@@ -140,7 +140,6 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: $white;
-  margin-bottom: 30px;
   .column-one {
     padding-right: 0;
   }
@@ -195,7 +194,6 @@
 }
 
 .cart-item {
-  margin-bottom: 30px;
   min-height: 75px;
   span {
     &.price {
@@ -220,7 +218,6 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: $white;
-  margin-bottom: 30px;
   p {
     color: $greyText;
     font-family: $ffOpenSans;
@@ -273,7 +270,6 @@
   font-size: 0;
   background-color: transparent;
   padding: 10px 0;
-  margin-bottom: 30px;
   h1,
   .btn-plain {
     vertical-align: middle;
@@ -364,7 +360,6 @@
   background-color: $white;
   min-height: 88px;
   padding: 15px 15px 5px;
-  margin-bottom: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   position: relative;
@@ -442,7 +437,6 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: $white;
-  margin-bottom: 30px;
   font-size: 0;
   padding: 0 10px 0 0;
   position: relative;

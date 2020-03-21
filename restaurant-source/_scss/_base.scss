@@ -1,6 +1,5 @@
 .btn {
   min-width: 100%;
-  margin-bottom: 10px;
   &.btn-primary {
     min-width: 100%;
   }
@@ -26,7 +25,6 @@
 .badge {
   min-width: 100%;
   line-height: 1.1;
-  margin-bottom: 10px;
   border: none;
   &.badge-primary {
     min-width: 100%;
@@ -70,7 +68,6 @@
 
 .custom-switch {
   padding: 0;
-  margin-bottom: 25px;
   .custom-control-label {
     padding-right: 60px;
     font-size: 23px;
@@ -140,4 +137,23 @@ textarea.form-control {
       padding-left: 5px;
     }
   }
+}
+
+
+//Gaps
+.btn,
+.badge,
+.choose-box,
+.square-box,
+.room-table,
+.menu-item-detail,
+.order-detail,
+.page-header,
+.table-status,
+.ordered-items-details,
+.buttons-wrap,
+.cart-item,
+.ordered-item,
+.custom-switch {
+  margin-bottom: 30px;
 }
