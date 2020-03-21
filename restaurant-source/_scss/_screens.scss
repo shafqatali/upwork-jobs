@@ -206,8 +206,10 @@
     margin-bottom: 15px !important;
   }
 }
+button,
 input[type="submit"],
 input[type="button"],
+.badge,
 .btn {
   &:hover,
   &:focus,
