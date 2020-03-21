@@ -6,6 +6,12 @@
   &.btn-secondary {
     color: $white;
     text-transform: uppercase;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $textColor;
+      border-color: $textColor;
+    }
   }
   &.btn-light {
     border: 1px solid $primary;
@@ -19,6 +25,13 @@
     border: 1px solid $greyC4;
     background-color: $white;
     color: $textColor;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $textColor;
+      border-color: $textColor;
+      color: $white;
+    }
   }
 }
 
@@ -43,6 +56,13 @@
     border: 1px solid $white;
     background-color: $white;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $textColor;
+      border-color: $textColor;
+      color: $white;
+    }
   }
   &.badge-border-only {
     background-color: transparent;
@@ -89,26 +109,15 @@
     &:after {
       width: 18px;
       height: 18px;
-      right: 8px;
+      right: 26px;
     }
   }
   .custom-control-input:checked ~ .custom-control-label {
     &:after {
       transform: none;
-      right: 30px;
+      right: 8px;
       background-color: $white;
     }
-  }
-}
-
-.custom-control.custom-radio {
-  display: inline-block;
-  label {
-    color: $textColor;
-    font-family: $ffOpenSans;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 38px;
   }
 }
 
@@ -151,9 +160,54 @@ textarea.form-control {
 .page-header,
 .table-status,
 .ordered-items-details,
-.buttons-wrap,
 .cart-item,
 .ordered-item,
-.custom-switch {
+.custom-switch,
+.new-login {
   margin-bottom: 30px;
+}
+
+.single-checkbox-style {
+  box-sizing: border-box;
+  display: inline-block;
+  .custom-control-input {
+    box-sizing: border-box;
+    &:checked ~ .checkbox-label::after {
+      background-color: $primary;
+    }
+  }
+  .checkbox-label {
+    color: $textColor;
+    font-family: $ffOpenSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38px;
+    padding-left: 30px;
+    position: relative;
+    user-select: none;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+    }
+    &:before {
+      width: 26px;
+      height: 26px;
+      background-color: $white;
+      border: 1px solid $greyC4;
+    }
+    &:after {
+      left: 4px;
+      width: 18px;
+      height: 18px;
+      background-color: transparent;
+    }
+  }
 }

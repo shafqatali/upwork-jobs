@@ -156,14 +156,14 @@ $enable-print-styles: true;
 
 */
 //Custom Controls
-$custom-control-indicator-focus-border-color: $success;
+$custom-control-indicator-focus-border-color: #B9B9B7;
 $custom-control-indicator-active-bg: $success;
 $custom-control-indicator-checked-border-color: transparent;
 $custom-control-indicator-active-border-color: transparent;
 $custom-control-indicator-checked-bg: $success;
 $custom-switch-indicator-border-radius: 24px;
-$custom-control-indicator-bg: $success;
+$custom-control-indicator-bg: #B9B9B7;
 $custom-control-indicator-border-color: #fff;
-$custom-control-indicator-disabled-bg: rgba($success, .5);
-$custom-control-indicator-checked-disabled-bg: rgba($success, .5);
-$input-btn-focus-color: rgba($success, .25);
+$custom-control-indicator-disabled-bg: rgba(#B9B9B7, .5);
+$custom-control-indicator-checked-disabled-bg: rgba(#B9B9B7, .5);
+$input-btn-focus-color: rgba(#B9B9B7, .25);

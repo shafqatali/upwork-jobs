@@ -65,4 +65,9 @@ body {
       text-decoration: none;
     }
   }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $yellow;
+  }
 }
