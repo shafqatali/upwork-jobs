@@ -1,7 +1,15 @@
 {% assign placeHolder = include.placeholder | default: "Email" %}
 {% assign fType = include.type | default: "email" %}
 {% assign ID = "field[x]" | random %}
+
 <div class="form-group">
-    <label for="{{ID}}" class="sr-only">Email</label>
+    <label for="{{ID}}" class="sr-only">{{placeHolder}}</label>
+    {% if fType == "select" %}
+    <select class="form-control" id="{{ID}}">
+        <option>English</option>
+        <option>French</option>
+    </select>
+    {% else %}
     <input type="{{fType}}" class="form-control" placeholder="{{placeHolder}}" id="{{ID}}">
+    {% endif %}
 </div>

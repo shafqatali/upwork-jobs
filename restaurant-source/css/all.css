@@ -7912,6 +7912,10 @@ we have to place the hex code of color after the last slash (/), It give a nice 
     right: 8px;
     background-color: #FFFFFF; }
 
+select.form-control {
+  text-align: center;
+  text-align-last: center; }
+
 .form-control {
   text-align: center; }
 
@@ -8033,18 +8037,19 @@ textarea.form-control {
     background-color: #4285F4; }
   .room-table.occupied {
     background-color: #E70D4D; }
-  .room-table:nth-child(3n + 3) {
-    margin-right: 0; }
+  @media screen and (max-width: 440px) {
+    .room-table:nth-child(3n + 3) {
+      margin-right: 0; } }
 
 .menu-item {
   display: inline-block; }
   .menu-item .media-box {
     position: relative; }
     .menu-item .media-box img {
-      border-radius: 50%;
       display: block;
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin-bottom: 10px; }
     .menu-item .media-box .icon {
       background-color: transparent;
       width: 50px;

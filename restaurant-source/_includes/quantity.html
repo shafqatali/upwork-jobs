@@ -1,6 +1,9 @@
 {% assign fColour = include.color | default: "" %}
 {% assign fNumber = include.text | default: "02" %}
-<div class="quantity {{fColour}}">
+{% assign ID = "quantity[x]" | random %}
+
+<div id="{{ID}}" class="quantity {{fColour}}">
+    <!-- each quantity div should have unique Id -->
     <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
     <span class="text">{{fNumber}}</span>
     <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
